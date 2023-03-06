@@ -50,7 +50,7 @@
 }
 
 .link {
-    color: var(--gray-color) !important;
+    color: var(--gray-color);
     position: relative;
     left: 0;
     transition: all .3s ease-in-out;
@@ -58,7 +58,7 @@
 
 .link:hover {
     left: 6px;
-    color: var(--main-text-color) !important;
+    color: var(--main-text-color);
 }
 
 .slogan {
@@ -94,8 +94,6 @@
             "phone email"
             "socialIcons socialIcons";
     }
-
-
 }
 
 @media (max-width: 481px) {
@@ -109,7 +107,6 @@
             "email"
             "socialIcons";
 
-        display: flex;
         flex-direction: column;
     }
 }
