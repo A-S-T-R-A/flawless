@@ -44,14 +44,10 @@ body {
     --navbar-height: 70px;
 }
 
-a {
-    text-decoration: none;
-}
-
-a:link,
-a:visited,
+a,
 a:hover,
-a:active {
+a:active,
+a:focus,
+a:visited {
     text-decoration: none;
-    color: inherit;
 }

@@ -7,7 +7,7 @@
 .item {
     display: flex;
     align-items: center;
-    font-size: 3rem;
+    font-size: 24px;
     transition: all 0.3s ease;
     color: var(--main-text-color);
     border-radius: 50px;
