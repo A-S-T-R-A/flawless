@@ -29,7 +29,6 @@
     .item {
         display: flex;
         align-items: center;
-        font-size: 3rem;
         transition: 0.2s ease;
         color: var(--main-text-color);
         /* white; */
