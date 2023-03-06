@@ -23,13 +23,13 @@ function Footer() {
                     <div className={styles.email}>
                         <a
                             className={styles.linkTitle}
-                            href="flawlessdynastybe@gmail.com"
+                            href="mailto:flawlessdynastybe@gmail.com"
                         >
                             Email
                         </a>
                         <a
                             className={styles.link}
-                            href="flawlessdynastybe@gmail.com"
+                            href="mailto:flawlessdynastybe@gmail.com"
                         >
                             flawlessdynastybe@gmail.com
                         </a>
