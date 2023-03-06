@@ -19,6 +19,7 @@ select {
 body {
     color: var(--main-text-color);
     font-family: 'Montserrat', sans-serif;
+    background-color: var(--main-bg-color);
 }
 
 :root {

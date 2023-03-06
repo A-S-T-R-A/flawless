@@ -9,15 +9,15 @@ function Footer() {
                     <div className={styles.phone}>
                         <a
                             className={styles.linkTitle}
-                            href="skype:live:artur0503915024"
+                            href="https://wa.me/+32485003653"
                         >
                             Whatsapp
                         </a>
                         <a
                             className={styles.link}
-                            href="skype:live:artur0503915024"
+                            href="https://wa.me/+32485003653"
                         >
-                            Flawless Phone Number
+                            +32 485 00 36 53
                         </a>
                     </div>
                     <div className={styles.email}>
@@ -34,9 +34,9 @@ function Footer() {
                             flawlessdynastybe@gmail.com
                         </a>
                     </div>
-                    <div className={styles.socialIcons}>
-                        <SocialIcons className={styles.icons} />
-                    </div>
+                </div>
+                <div className={styles.socialIcons}>
+                    <SocialIcons className={styles.icons} />
                 </div>
             </div>
         </footer>

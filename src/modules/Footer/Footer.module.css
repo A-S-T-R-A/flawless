@@ -17,9 +17,8 @@
 
 .content {
     width: 100%;
-    display: grid;
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    justify-content: space-between;
     grid-row-gap: 50px;
     grid-template-areas:
         "phone email socialIcons";
