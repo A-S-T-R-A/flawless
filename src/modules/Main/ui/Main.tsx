@@ -14,7 +14,7 @@ export function Main() {
                 controls={false}
                 muted
                 playsInline
-                autoPlay
+                autoPlay={false}
                 className={styles.video}
             />
             <div className={styles.container}>
