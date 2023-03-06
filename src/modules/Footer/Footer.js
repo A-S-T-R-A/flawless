@@ -11,7 +11,7 @@ function Footer() {
                             className={styles.linkTitle}
                             href="https://wa.me/+32485003653"
                         >
-                            Whatsapp
+                            WhatsApp
                         </a>
                         <a
                             className={styles.link}

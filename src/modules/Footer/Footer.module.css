@@ -108,5 +108,8 @@
             "phone"
             "email"
             "socialIcons";
+
+        display: flex;
+        flex-direction: column;
     }
 }
