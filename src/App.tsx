@@ -1,6 +1,10 @@
-import React from "react"
+import { Main } from "modules/Main"
 import "./index.css"
 
 export function App() {
-    return <div></div>
+    return (
+        <div>
+            <Main />
+        </div>
+    )
 }
