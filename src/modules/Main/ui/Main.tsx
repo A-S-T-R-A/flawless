@@ -19,15 +19,8 @@ export function Main() {
                         of atmospheres and world-renowned musical talent.
                     </p>
                     <div className={styles.btnContainer}>
-                        <Button variant={ButtonVariant.NEON}>
-                            BUY TICKETS
-                        </Button>
-
-                        {/* <Button variant={ButtonVariant.OUTLINED}>
-                            BOOK TABLE
-                        </Button> */}
+                        <NeonButton>BUY TICKETS</NeonButton>
                     </div>
-                    {/* <NeonButton /> */}
                 </div>
             </div>
         </div>
