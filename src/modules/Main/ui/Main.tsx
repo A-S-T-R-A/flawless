@@ -2,7 +2,6 @@ import styles from "./Main.module.css"
 //@ts-ignore
 import video from "assets/video/video.mp4"
 import { VideoBg } from "modules/common/components/VideoBg"
-import { Button, ButtonVariant } from "modules/common/Button"
 import { NeonButton } from "modules/common/components/NeonButton/NeonButton"
 
 const height = window.innerHeight
