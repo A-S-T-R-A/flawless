@@ -7,7 +7,7 @@ const height = window.innerHeight
 
 export function Main() {
     return (
-        <div className={styles.wrapper} style={{ height }}>
+        <div className={styles.wrapper} style={{ height: height + "px" }}>
             <video
                 src={video}
                 //@ts-ignore
