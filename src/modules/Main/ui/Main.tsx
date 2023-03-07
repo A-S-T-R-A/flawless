@@ -3,11 +3,11 @@ import styles from "./Main.module.css"
 import video from "assets/video/video.mp4"
 import { Button, ButtonVariant } from "modules/common/Button"
 
-const minHeight = window.innerHeight
+const height = window.innerHeight
 
 export function Main() {
     return (
-        <div className={styles.wrapper} style={{ minHeight }}>
+        <div className={styles.wrapper} style={{ height }}>
             <video
                 src={video}
                 //@ts-ignore
