@@ -20,7 +20,7 @@ export function BurgerCta({ closeClickHandler }) {
                 variant={ButtonVariant.OUTLINED}
                 className={styles.contact}
             >
-                Contact Me
+                Buy tickets
             </Button>
         </div>
     )

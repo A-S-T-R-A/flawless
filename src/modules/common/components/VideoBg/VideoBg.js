@@ -10,7 +10,7 @@ export function VideoBg({ src }) {
             controls={false}
             muted
             playsInline
-            autoPlay
+            autoPlay={false}
             className={styles.video}
         />
     )
