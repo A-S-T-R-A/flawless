@@ -8,6 +8,7 @@ export enum ButtonVariant {
     CLEAR = "clear",
     OUTLINED = "outlined",
     FILLED = "filled",
+    NEON = "neon",
 }
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

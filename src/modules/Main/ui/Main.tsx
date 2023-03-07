@@ -3,6 +3,7 @@ import styles from "./Main.module.css"
 import video from "assets/video/video.mp4"
 import { VideoBg } from "modules/common/components/VideoBg"
 import { Button, ButtonVariant } from "modules/common/Button"
+import { NeonButton } from "modules/common/components/NeonButton/NeonButton"
 
 const height = window.innerHeight
 
@@ -18,13 +19,15 @@ export function Main() {
                         of atmospheres and world-renowned musical talent.
                     </p>
                     <div className={styles.btnContainer}>
-                        <Button variant={ButtonVariant.FILLED}>
+                        <Button variant={ButtonVariant.NEON}>
                             BUY TICKETS
                         </Button>
-                        <Button variant={ButtonVariant.OUTLINED}>
+
+                        {/* <Button variant={ButtonVariant.OUTLINED}>
                             BOOK TABLE
-                        </Button>
+                        </Button> */}
                     </div>
+                    {/* <NeonButton /> */}
                 </div>
             </div>
         </div>
