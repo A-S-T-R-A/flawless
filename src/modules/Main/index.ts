@@ -1,1 +1,2 @@
-export { Main } from "./ui/Main"
+import { Main } from "./ui/Main"
+export { Main }
