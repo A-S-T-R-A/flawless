@@ -147,7 +147,18 @@
         min-width: 400px;
         height: 550px;
     }
+
+    .viewButton {
+        margin-top: 2rem;
+    }
 }
+
+@media screen and (min-width: 1150px) {
+    .viewButton {
+        margin-top: 2rem;
+    }
+}
+
 
 @media screen and (max-width: 1150px) {
     .wrapper {
@@ -158,11 +169,19 @@
         max-width: 100%;
         margin: 5rem 0;
     }
+
+    .viewButton {
+        margin-top: 2rem;
+    }
 }
 
 @media screen and (max-width: 850px) {
     .wrapper {
         padding: 4rem 0rem 4rem 4rem;
+    }
+
+    .viewButton {
+        margin-top: 1.5rem;
     }
 }
 
