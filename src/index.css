@@ -30,12 +30,14 @@ body {
     --font-lg: 20px;
     --font-xl: 24px;
     --font-title: 32px;
+
     /* Colors */
     --main-bg-color: #0f061f;
     --navbar-bg-color: #1f202923;
     --modal-bg-color: #101825;
     --main-text-color: #f1f1f1;
-    --accent-color: #743AD0;
+    /* --accent-color: #743AD0; */
+    --accent-color: rgb(255, 20, 189);
     --alternative-color: #5FB2F8;
     --gray-color: #6b7688;
     --lightgray-color: #e4e4e4;

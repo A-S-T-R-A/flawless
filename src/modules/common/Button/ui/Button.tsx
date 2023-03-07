@@ -1,5 +1,4 @@
-import React, { ReactElement, ReactNode } from "react"
-import { ButtonHTMLAttributes } from "react"
+import React, { ReactElement, ReactNode, ButtonHTMLAttributes } from "react"
 import { classNames } from "modules/common/helpers/classNames"
 
 import styles from "./Button.module.css"
