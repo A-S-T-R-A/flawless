@@ -78,12 +78,7 @@
 
 .icons {
     justify-content: space-between;
-}
-
-@media (max-width: 961px) {
-    .icons {
-        justify-content: space-evenly;
-    }
+    font-size: 30px;
 }
 
 @media (max-width: 651px) {
