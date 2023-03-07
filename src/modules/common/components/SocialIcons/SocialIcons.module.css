@@ -22,28 +22,13 @@
 }
 
 @media (min-width: 961px) {
-    .socials {
-        height: 100%;
-        display: flex;
-        justify-content: space-around;
-    }
-
     .item {
-        display: flex;
-        align-items: center;
         transition: 0.2s ease;
         color: var(--main-text-color);
-        /* white; */
     }
 
     .item:hover {
         transform: scale(1.2);
         cursor: pointer;
-    }
-}
-
-@media (max-width: 400px) {
-    .socials {
-        width: 150px;
     }
 }
