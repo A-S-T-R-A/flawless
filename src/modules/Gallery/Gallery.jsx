@@ -1,24 +1,32 @@
 import React, { useRef } from "react"
 
+import { BsZoomIn, BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs"
+
+import styles from "./Gallery.module.css"
+
 import {
-    BsInstagram,
-    BsArrowLeftShort,
-    BsArrowRightShort,
-} from "react-icons/bs"
-
-import { SubHeading } from "/components/SubHeading"
-import { images } from "/assets/constants"
-
-import "./Gallery.css"
+    gallery1,
+    gallery2,
+    gallery3,
+    gallery4,
+    gallery5,
+    gallery6,
+    gallery7,
+    gallery8,
+} from "assets/gallery"
 
 const galleryImages = [
-    images.gallery1,
-    images.gallery2,
-    images.gallery3,
-    images.gallery4,
+    gallery1,
+    gallery2,
+    gallery3,
+    gallery4,
+    gallery5,
+    gallery6,
+    gallery7,
+    gallery8,
 ]
 
-function Gallery() {
+export function Gallery() {
     const scrollRef = useRef(null)
     function scroll(direction) {
         const { current } = scrollRef
@@ -30,39 +38,35 @@ function Gallery() {
         }
     }
     return (
-        <div className="app__gallery flex__center">
-            <div className="app__gallery-content">
-                <SubHeading title="Instagram" />
-                <h1 className="headtext__cormorant">Photo Gallery</h1>
-                <p
-                    className="p__opensans"
-                    style={{ color: "#AAA", marginTop: "2rem" }}
-                >
+        <div className={styles.wrapper}>
+            <div className={styles.content}>
+                <h1 className={styles.headText}>Photo Gallery</h1>
+                <p className={styles.indoduction}>
                     Lorem Ipsum Dolor Sit Amet, Consectetur Adipiscing Elit. Sed
                     Do Eiusmod Tempor Incididunt Ut Labore Et Dolore Magna
                     Aliqua.
                 </p>
-                <button className="custom__button">View More</button>
+                <button className={styles.viewButton}>View More</button>
             </div>
-            <div className="app__gallery-images">
-                <div className="app__gallery-images_container" ref={scrollRef}>
+            <div className={styles.galleryImages}>
+                <div className={styles.imagesContainer} ref={scrollRef}>
                     {galleryImages.map((image, index) => (
                         <div
-                            className="app__gallery-images_card flex__center"
-                            key={`gallery_image-${index + 1}`}
+                            className={styles.imagesCard}
+                            key={`galleryImage-${index + 1}`}
                         >
                             <img src={image} alt="gallery" />
-                            <BsInstagram className="gallery__image-icon" />
+                            <BsZoomIn className={styles.imageIcon} />
                         </div>
                     ))}
                 </div>
-                <div className="app__gallery-images_arrows">
+                <div className={styles.imagesArrows}>
                     <BsArrowLeftShort
-                        className="gallery__arrow-icon"
+                        className={styles.arrowIcon}
                         onClick={() => scroll("left")}
                     />
                     <BsArrowRightShort
-                        className="gallery__arrow-icon"
+                        className={styles.arrowIcon}
                         onClick={() => scroll("right")}
                     />
                 </div>
@@ -70,5 +74,3 @@ function Gallery() {
         </div>
     )
 }
-
-export default Gallery
