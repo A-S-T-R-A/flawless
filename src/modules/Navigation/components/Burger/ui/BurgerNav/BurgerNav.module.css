@@ -12,7 +12,8 @@
 }
 
 .video {
-    opacity: 1
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .wrapper {
