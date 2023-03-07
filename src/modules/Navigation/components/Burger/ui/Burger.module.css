@@ -1,0 +1,20 @@
+.wrapper {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  height: 100vh;
+  min-width: 100%;
+}
+
+.displayNone {
+  display: none;
+}
+
+@media (max-width: 961px) {
+  .displayNone {
+    display: block;
+  }
+}
