@@ -4,6 +4,8 @@ import video from "assets/video/video.mp4"
 import { VideoBg } from "modules/common/components/VideoBg"
 import { Button, ButtonVariant } from "modules/common/Button"
 
+const height = window.innerHeight
+
 export function Main() {
     return (
         <div className={styles.wrapper}>
