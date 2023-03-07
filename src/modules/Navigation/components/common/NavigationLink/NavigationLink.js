@@ -1,4 +1,3 @@
-import React from "react"
 import styles from "./NavigationLink.module.css"
 
 export function NavigationLink({ children, link, onClick }) {

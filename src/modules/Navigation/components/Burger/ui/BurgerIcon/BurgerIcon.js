@@ -1,4 +1,3 @@
-import React from "react"
 import styles from "./BurgerIcon.module.css"
 
 export function BurgerIcon({ showBurger, setShowBurger }) {

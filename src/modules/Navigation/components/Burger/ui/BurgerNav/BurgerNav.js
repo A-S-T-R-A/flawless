@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 import { menuData } from "../../../../data"
-import { BurgerCta } from "../"
-import { NavigationList } from "../../../common"
+import { BurgerCta } from "../BurgerCta"
+import { NavigationList } from "../../../common/NavigationList"
 import styles from "./BurgerNav.module.css"
+import video from "assets/video/video.mp4"
+import { classNames } from "modules/common/helpers/classNames"
+import { VideoBg } from "modules/common/components/VideoBg"
 
 export function BurgerNav({ showBurger, setShowBurger }) {
     const [height, setHeight] = useState(window.innerHeight)
@@ -30,10 +33,18 @@ export function BurgerNav({ showBurger, setShowBurger }) {
 
     return (
         <div
-            className={`${styles.overlay} ${showBurger ? styles.navOpen : ""}`}
+            className={classNames(styles.overlay, {
+                [styles.video]: showBurger,
+            })}
             onClick={closeClickHandler}
         >
-            <div className={styles.wrapper} onClick={menuClickHandler}>
+            <VideoBg src={video} />
+            <div
+                className={classNames(styles.wrapper, {
+                    [styles.navOpen]: showBurger,
+                })}
+                onClick={menuClickHandler}
+            >
                 <div
                     className={styles.container}
                     style={{ height: `${height}px` }}
@@ -41,6 +52,7 @@ export function BurgerNav({ showBurger, setShowBurger }) {
                     <NavigationList
                         closeClickHandler={closeClickHandler}
                         menuData={menuData}
+                        className={styles.list}
                     />
                     <BurgerCta closeClickHandler={closeClickHandler} />
                 </div>

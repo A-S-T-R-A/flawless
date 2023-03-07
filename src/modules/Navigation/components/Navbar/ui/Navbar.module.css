@@ -9,6 +9,10 @@
     margin-left: 20px;
 }
 
+.list {
+    font-size: 14px;
+}
+
 @media (min-width: 961px) {
     .navBar {
         width: 100%;

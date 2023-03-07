@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import styles from "./Navigation.module.css"
-import { Burger, Navbar } from "./components"
-/* import { Logo } from "assets/images/other" */
+import { Burger } from "./components/Burger"
+import { Navbar } from "./components/Navbar"
 import { classNames } from "modules/common/helpers/classNames"
 
 export function Navigation() {

@@ -1,10 +1,12 @@
-import React from "react"
 import styles from "./NavigationList.module.css"
 import { NavigationLink } from "../NavigationLink"
+import { classNames } from "modules/common/helpers/classNames"
 
-export function NavigationList({ closeClickHandler, menuData }) {
+export function NavigationList({ closeClickHandler, menuData, className }) {
+    const classNameList = classNames(styles.list, {}, [className])
+
     return (
-        <ul className={styles.list}>
+        <ul className={classNameList}>
             {menuData.map(item => {
                 return (
                     <NavigationLink

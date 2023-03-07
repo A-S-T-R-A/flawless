@@ -1,4 +1,3 @@
-import React from "react"
 import { Button, ButtonVariant } from "modules/common/Button"
 import styles from "./BurgerCta.module.css"
 
@@ -14,7 +13,7 @@ export function BurgerCta({ closeClickHandler }) {
     }
 
     return (
-        <div className={styles.ctaBtn}>
+        <div className={styles.container}>
             <SocialIcons onClick={closeClickHandler} />
             <Button
                 onClick={clickHandler}
