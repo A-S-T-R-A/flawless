@@ -46,4 +46,8 @@
         position: fixed;
         top: 1.5rem;
     }
+
+    .isScrolled {
+        min-height: 70px;
+    }
 }
