@@ -2,7 +2,7 @@
     position: absolute;
     bottom: 10px;
     font-size: 30px;
-    color: white;
+    color: var(--main-text-color);
     animation: animateDown infinite 1.8s;
 }
 
@@ -22,5 +22,11 @@
 
     60% {
         transform: translateY(3px)
+    }
+}
+
+@media (min-width: 960px) {
+    .chevron {
+        font-size: 40px;
     }
 }
