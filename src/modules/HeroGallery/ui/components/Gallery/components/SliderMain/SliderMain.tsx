@@ -1,18 +1,20 @@
+import { useState } from "react"
+import styles from "./SliderMain.module.css"
+import { classNames } from "modules/common/helpers/classNames"
+import { gallerySlidesUrl } from "../../../../../data/gallerySlidesUrl"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Mousewheel, Parallax, Controller } from "swiper"
 import "swiper/css"
 import "swiper/css/mousewheel"
 import "swiper/css/controller"
-import { useState } from "react"
-import { classNames } from "modules/common/helpers/classNames"
+import "swiper/css/free-mode"
 
 interface SliderMainProps {
     controlledSwiper: any
+    setShowHero: any
 }
 
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-export function SliderMain({ controlledSwiper }: SliderMainProps) {
+export function SliderMain({ controlledSwiper, setShowHero }: SliderMainProps) {
     const [slideOpen, setSlideOpen] = useState(-1)
 
     function clickHandler(i: number) {
@@ -23,32 +25,42 @@ export function SliderMain({ controlledSwiper }: SliderMainProps) {
         }
     }
 
+    function swiperChangeHandler(swiper: any) {
+        setSlideOpen(-1)
+        const start = swiper.activeIndex === 0
+        setShowHero(start ? true : false)
+    }
+
     return (
         <Swiper
             modules={[Mousewheel, Parallax, Controller]}
-            freeMode={true}
+            freeMode={{ enabled: true }}
             centeredSlides={true}
             slidesPerView={3.5}
             controller={{ control: controlledSwiper }}
-            mousewheel
+            mousewheel={{ sensitivity: 10 }}
             parallax
             breakpoints={{
                 0: {
                     slidesPerView: 2.5,
                     spaceBetween: 20,
                 },
+                480: {
+                    centeredSlides: false,
+                },
                 680: {
                     slidesPerView: 3.5,
                     spaceBetween: 60,
                 },
             }}
-            className="slider"
+            onSlideChange={swiper => swiperChangeHandler(swiper)}
+            className={styles.slider}
         >
-            {arr.map((item, index) => {
+            {gallerySlidesUrl.map((item, index) => {
                 const sliderItemClassName = classNames(
-                    "slider__item",
+                    styles.sliderItem,
                     {
-                        slideOpen: slideOpen === index,
+                        [styles.slideOpen]: slideOpen === index,
                     },
                     []
                 )
@@ -59,12 +71,11 @@ export function SliderMain({ controlledSwiper }: SliderMainProps) {
                         onClick={() => clickHandler(index)}
                     >
                         <div
-                            className="slider__img"
+                            className={styles.sliderImage}
                             data-swiper-parallax={index % 2 ? "30%" : "20%"}
                             style={{
-                                backgroundImage: `url(${require("assets/images/heroGallery/" +
-                                    item +
-                                    ".jpg")})`,
+                                backgroundImage: `url(${require("assets/images/gallery" +
+                                    item)})`,
                             }}
                         ></div>
                     </SwiperSlide>

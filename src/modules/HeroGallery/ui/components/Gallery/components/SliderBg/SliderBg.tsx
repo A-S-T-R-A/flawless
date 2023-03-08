@@ -1,3 +1,5 @@
+import styles from "./SliderBg.module.css"
+import { gallerySlidesUrl } from "../../../../../data/gallerySlidesUrl"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Parallax, Controller } from "swiper"
 import "swiper/css"
@@ -7,7 +9,6 @@ interface SliderBgProps {
 }
 
 export function SliderBg({ setControlledSwiper }: SliderBgProps) {
-    const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9]
     return (
         <Swiper
             onSwiper={setControlledSwiper}
@@ -16,17 +17,16 @@ export function SliderBg({ setControlledSwiper }: SliderBgProps) {
             parallax
             slidesPerView={3.5}
             spaceBetween={60}
-            className="slider_bg"
+            className={styles.sliderBg}
         >
-            {arr.map((item, index) => (
-                <SwiperSlide className="slider__item" key={index}>
+            {gallerySlidesUrl.map((item, index) => (
+                <SwiperSlide className={styles.sliderItem} key={index}>
                     <div
-                        className="slider__img"
+                        className={styles.sliderImage}
                         data-swiper-parallax={index % 2 ? "30%" : "20%"}
                         style={{
-                            backgroundImage: `url(${require("assets/images/heroGallery/" +
-                                item +
-                                ".jpg")})`,
+                            backgroundImage: `url(${require("assets/images/gallery" +
+                                item)})`,
                         }}
                     ></div>
                 </SwiperSlide>
