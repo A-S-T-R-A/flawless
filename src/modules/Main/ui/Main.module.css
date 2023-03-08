@@ -37,6 +37,11 @@
     display: flex;
 }
 
+.logo {
+    max-width: 250px;
+    margin-bottom: 20px;
+}
+
 .btnContainer>* {
     width: 150px;
     height: 40px;

@@ -38,6 +38,7 @@
 .logo {
     width: 150px;
     margin-left: 1rem;
+    margin-top: 1.5rem;
 }
 
 @media (max-width: 960px) {
