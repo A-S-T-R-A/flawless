@@ -1,12 +1,12 @@
-import firstImg from "./1.jpg"
-import secondImg from "./2.jpg"
-import thirdImg from "./3.jpg"
-import fourthImg from "./4.jpg"
-import fifthImg from "./5.jpg"
-import sixthImg from "./6.jpg"
-import seventhImg from "./7.jpg"
-import eightsImg from "./8.jpg"
-import ninethImg from "./9.jpg"
+import firstImg from "./gallery1.jpeg"
+import secondImg from "./gallery2.jpeg"
+import thirdImg from "./gallery3.jpeg"
+import fourthImg from "./gallery4.jpeg"
+import fifthImg from "./gallery5.jpeg"
+import sixthImg from "./gallery6.jpeg"
+import seventhImg from "./gallery7.jpeg"
+import eightsImg from "./gallery8.jpeg"
+import ninethImg from "./gallery9.jpeg"
 
 export {
     firstImg,
