@@ -35,7 +35,6 @@ export function SliderMain({ controlledSwiper, setShowHero }: SliderMainProps) {
         <Swiper
             modules={[Mousewheel, Parallax, Controller]}
             freeMode={{ enabled: true }}
-            centeredSlides={true}
             slidesPerView={3.5}
             controller={{ control: controlledSwiper }}
             mousewheel={{ sensitivity: 10 }}
@@ -44,9 +43,6 @@ export function SliderMain({ controlledSwiper, setShowHero }: SliderMainProps) {
                 0: {
                     slidesPerView: 2.5,
                     spaceBetween: 20,
-                },
-                480: {
-                    centeredSlides: false,
                 },
                 680: {
                     slidesPerView: 3.5,

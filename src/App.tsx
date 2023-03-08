@@ -1,4 +1,3 @@
-import { Gallery } from "modules/Gallery"
 import { HeroGallery } from "modules/HeroGallery"
 import { Main } from "modules/Main"
 import { Navigation } from "modules/Navigation"
@@ -12,10 +11,10 @@ export function App() {
             {/* <Navigation />
             <Main />
             <Rules />
-            <HeroGallery />
+            
             <Rules />
             <Footer /> */}
-            <Gallery />
+            <HeroGallery />
         </div>
     )
 }

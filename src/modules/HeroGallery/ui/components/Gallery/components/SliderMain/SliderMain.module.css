@@ -1,8 +1,6 @@
 .slider {
     height: 100%;
-
     overflow: visible !important;
-    top: 10vh;
     z-index: 2 !important;
     position: relative;
 }

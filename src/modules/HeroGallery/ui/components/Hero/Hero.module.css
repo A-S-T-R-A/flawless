@@ -1,12 +1,11 @@
 .description {
     font-size: calc(var(--sizeindex) * .8);
-    /* top: 200px;
-    left: 8vw; */
     transition: opacity var(--swiper-transition), transform var(--swiper-transition);
     border: 1px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .logo {
@@ -29,11 +28,14 @@
     margin-bottom: 10px;
 }
 
-.description.hidden {
-    opacity: 0;
-    transform: translateY(5vh);
-}
 
-.description.hidden p {
-    transform: translateY(2vh);
+@media(min-width: 960px) {
+    .description.hidden {
+        opacity: 0;
+        transform: translateY(5vh);
+    }
+
+    .description.hidden p {
+        transform: translateY(2vh);
+    }
 }
