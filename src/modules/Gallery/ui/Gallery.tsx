@@ -43,26 +43,26 @@ export function Gallery() {
     }
 
     return (
-        <div className={styles.wrapper}>
-            <div
-                className={styles.container}
-                onMouseDown={mouseDownHandler}
-                onTouchStart={e => {
-                    mouseDownHandler(e.touches[0])
-                }}
-                onMouseUp={mouseUpHandler}
-                onTouchEnd={e => {
-                    mouseDownHandler(e.touches[0])
-                }}
-                onMouseMove={mouseMoveHandler}
-                onTouchMove={e => {
-                    mouseDownHandler(e.touches[0])
-                }}
-            >
+        <div
+            className={styles.wrapper}
+            onMouseUp={mouseUpHandler}
+            onTouchEnd={e => {
+                mouseDownHandler(e.touches[0])
+            }}
+            onMouseMove={mouseMoveHandler}
+            onTouchMove={e => {
+                mouseDownHandler(e.touches[0])
+            }}
+        >
+            <div className={styles.container}>
                 <div
                     className={styles.imageTrack}
                     //@ts-ignore
                     ref={trackRef}
+                    onMouseDown={mouseDownHandler}
+                    onTouchStart={e => {
+                        mouseDownHandler(e.touches[0])
+                    }}
                 >
                     <ImagesList percentageScrolled={percentageScrolled} />
                 </div>
