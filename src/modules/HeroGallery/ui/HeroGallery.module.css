@@ -1,5 +1,22 @@
 .wrapper {
     padding: 0 20px;
+
 }
 
-@media (min-width:481px) {}
+@media (min-width:481px) {
+    .wrapper {
+        min-height: 100vh;
+        border: 1px solid green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        border: 1px solid magenta;
+        width: 100%;
+        position: relative;
+        display: flex;
+        max-width: 1200px;
+    }
+}

@@ -34,8 +34,6 @@
     box-shadow: rgba(0, 0, 0, .75) 0 0 0 10000px;
 }
 
-@media (min-width:481px) {
-    .slider {
-        transform: rotate(15deg);
-    }
-}
+/* @media (min-width:481px) {
+    .slider {}
+} */

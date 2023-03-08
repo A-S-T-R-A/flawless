@@ -15,6 +15,11 @@ export function SliderBg({ setControlledSwiper }: SliderBgProps) {
             modules={[Parallax, Controller]}
             centeredSlides={true}
             parallax
+            breakpoints={{
+                680: {
+                    centeredSlides: true,
+                },
+            }}
             slidesPerView={3.5}
             spaceBetween={60}
             className={styles.sliderBg}

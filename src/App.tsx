@@ -8,13 +8,11 @@ import { Footer } from "./modules/Footer"
 export function App() {
     return (
         <div>
-            {/* <Navigation />
+            <Navigation />
             <Main />
-            <Rules />
-            
-            <Rules />
-            <Footer /> */}
             <HeroGallery />
+            <Rules />
+            <Footer />
         </div>
     )
 }
