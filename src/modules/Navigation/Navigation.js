@@ -29,7 +29,11 @@ export function Navigation() {
     return (
         <div className={wrapperClassName}>
             <div className={styles.container}>
-                <img className={styles.logo} src={logowhite} alt="logo" />
+                <img
+                    className={styles.logoContainer}
+                    src={logowhite}
+                    alt="logo"
+                />
                 <Navbar />
                 <Burger />
             </div>

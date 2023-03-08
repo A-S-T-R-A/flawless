@@ -16,7 +16,7 @@ export function Main() {
             <VideoBg src={video} />
             <div className={styles.container}>
                 <div className={styles.content}>
-                    <img className={styles.logo} src={logowhite} alt="logo" />
+                    <img className={styles.title} src={logowhite} alt="logo" />
                     <p className={styles.description}>
                         An all-encompassing nightlife experience with a variety
                         of atmospheres and world-renowned musical talent.

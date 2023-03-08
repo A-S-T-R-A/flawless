@@ -28,17 +28,9 @@
 .logoContainer {
     display: flex;
     align-items: flex-start;
-    width: 100%;
+    width: 150px;
     max-width: max-content;
     margin-left: 20px;
-    font-size: 26px;
-    font-weight: 700;
-}
-
-.logo {
-    width: 150px;
-    margin-left: 1rem;
-    margin-top: 1.5rem;
 }
 
 @media (max-width: 960px) {
