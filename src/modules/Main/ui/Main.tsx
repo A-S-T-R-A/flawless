@@ -3,6 +3,7 @@ import styles from "./Main.module.css"
 import video from "assets/video/video.mp4"
 import { VideoBg } from "modules/common/components/VideoBg"
 import { NeonButton } from "modules/common/components/NeonButton/NeonButton"
+import { AnimatedChevron } from "modules/common/components/AnimatedChevron/AnimatedChevron"
 
 const height = window.innerHeight
 
@@ -21,6 +22,7 @@ export function Main() {
                         <NeonButton>BUY TICKETS</NeonButton>
                     </div>
                 </div>
+                <AnimatedChevron />
             </div>
         </div>
     )
