@@ -44,6 +44,11 @@ body {
     --warning-color: red;
     /* Heights */
     --navbar-height: 70px;
+
+    /* Swiper */
+    --dark: #070707;
+    --sizeindex: calc(1vw + 1vh);
+    --transition: .75s cubic-bezier(.2, .6, 0, 1);
 }
 
 a,
