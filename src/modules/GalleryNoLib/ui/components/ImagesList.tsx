@@ -1,4 +1,4 @@
-/* import { imagesData } from "modules/Gallery/data/imagesData" */
+import { imagesData } from "../../data/imagesData"
 import styles from "./ImagesList.module.css"
 
 interface ImagesListProps {
@@ -8,7 +8,7 @@ interface ImagesListProps {
 export function ImagesList({ percentageScrolled }: ImagesListProps) {
     return (
         <>
-            {/*  {imagesData.map((url, index) => (
+            {imagesData.map((url: string, index: number) => (
                 <img
                     key={index}
                     src={url}
@@ -19,7 +19,7 @@ export function ImagesList({ percentageScrolled }: ImagesListProps) {
                     }}
                     draggable={false}
                 />
-            ))} */}
+            ))}
         </>
     )
 }

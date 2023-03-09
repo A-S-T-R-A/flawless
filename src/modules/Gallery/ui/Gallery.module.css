@@ -1,7 +1,8 @@
 .container {
     width: 100%;
-    height: 250px;
+    height: 340px;
     margin: 50px 0;
+    position: relative;
 }
 
 @media(min-width:481px) {
@@ -14,4 +15,10 @@
     .container {
         height: 400px;
     }
+}
+
+.text {
+    position: absolute;
+    left: 15%;
+    top: 50%;
 }

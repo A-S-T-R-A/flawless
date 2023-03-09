@@ -2,11 +2,12 @@ import { useState } from "react"
 import styles from "./SliderMain.module.css"
 import { classNames } from "modules/common/helpers/classNames"
 import { Swiper, SwiperSlide } from "swiper/react"
-import { Mousewheel, Parallax, Controller } from "swiper"
+import { Mousewheel, Parallax, Controller, Navigation } from "swiper"
 import "swiper/css"
 import "swiper/css/mousewheel"
 import "swiper/css/controller"
 import "swiper/css/free-mode"
+import "swiper/css/navigation"
 import { gallerySlidesUrl } from "../../../data/gallerySlidesUrl"
 
 interface SliderMainProps {
@@ -30,16 +31,21 @@ export function SliderMain({ controlledSwiper }: SliderMainProps) {
 
     return (
         <Swiper
-            modules={[Mousewheel, Parallax, Controller]}
+            modules={[Mousewheel, Parallax, Controller, Navigation]}
             freeMode={{ enabled: true }}
             slidesPerView={3.5}
             controller={{ control: controlledSwiper }}
-            mousewheel={{ sensitivity: 3 }}
+            mousewheel={false}
             parallax
+            navigation={{
+                nextEl: "#nextStaff",
+                prevEl: "#prevStaff",
+            }}
             breakpoints={{
                 0: {
                     slidesPerView: 1.5,
                     spaceBetween: 20,
+                    centeredSlides: true,
                 },
                 480: {
                     slidesPerView: 2.5,

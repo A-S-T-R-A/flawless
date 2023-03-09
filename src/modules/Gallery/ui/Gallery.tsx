@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { SliderBg } from "./components/SliderBg/SliderBg"
 import { SliderMain } from "./components/SliderMain/SliderMain"
+import { SwiperNav } from "./components/SwiperNav"
 import styles from "./Gallery.module.css"
 
 export function Gallery() {
@@ -10,6 +11,7 @@ export function Gallery() {
         <div className={styles.container}>
             <SliderMain controlledSwiper={controlledSwiper} />
             <SliderBg setControlledSwiper={setControlledSwiper} />
+            <SwiperNav />
         </div>
     )
 }
