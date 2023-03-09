@@ -151,6 +151,8 @@
     margin-right: 30px;
     object-fit: cover;
     object-position: 30% center;
+    /* 
+    transition: object-position 0.2s; */
 }
 
 

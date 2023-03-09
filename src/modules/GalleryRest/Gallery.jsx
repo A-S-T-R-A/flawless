@@ -28,9 +28,12 @@ const galleryImages = [
     ninethImg,
 ]
 
+const slidesCount = galleryImages.length
+
 export function Gallery() {
     const scrollRef = useRef(null)
-    const [percent, setPercent] = useState(0)
+    const [currentIndex, setCurrentIndex] = useState(0)
+    const [currentPercent, setCurrentPercent] = useState(0)
 
     function scroll(direction) {
         if (direction === "left") {
@@ -45,10 +48,23 @@ export function Gallery() {
 
         const x = (scrollLeft / scrollWidth) * 100
 
-        setPercent(x)
-    }
+        const spacePerSlide = scrollWidth / slidesCount
+        const currentSlideIndex = Math.floor(scrollLeft / spacePerSlide)
+        const currentSlidePercentage =
+            ((scrollLeft % spacePerSlide) / spacePerSlide) * 100
 
-    console.log(percent)
+        const currentPosition = scrollLeft / spacePerSlide
+
+        console.log(currentPosition)
+
+        setCurrentIndex(currentSlideIndex)
+        setCurrentPercent(x)
+
+        //if index === currentIndex, then this img is in viewport.
+        //So it has to be translated.
+
+        /* setPercent(x) */
+    }
 
     return (
         <div className={styles.wrapper}>
@@ -67,20 +83,28 @@ export function Gallery() {
                     ref={scrollRef}
                     onScroll={onScrollX}
                 >
-                    {galleryImages.map((image, index) => (
-                        <img
-                            key={index}
-                            src={image}
-                            alt=""
-                            className={styles.img}
-                            draggable={false}
-                            style={{
-                                objectPosition: `${
-                                    30 + percent / 1.45
-                                }% center`,
-                            }}
-                        />
-                    ))}
+                    {galleryImages.map((image, index) => {
+                        /* const percent =
+                            index === currentIndex || index === currentIndex + 1
+                                ? currentPercent
+                                : 0 */
+
+                        return (
+                            <img
+                                key={index}
+                                src={image}
+                                alt=""
+                                className={styles.img}
+                                draggable={false}
+                                style={{
+                                    objectPosition: `${
+                                        /* 30 + percent / 1.45 */
+                                        currentPercent
+                                    }% center`,
+                                }}
+                            />
+                        )
+                    })}
                 </div>
                 <div className={styles.imagesArrows}>
                     <BsArrowLeftShort
