@@ -5,25 +5,27 @@ import { BsZoomIn, BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs"
 import styles from "./Gallery.module.css"
 
 import {
-    gallery1,
-    gallery2,
-    gallery3,
-    gallery4,
-    gallery5,
-    gallery6,
-    gallery7,
-    gallery8,
-} from "assets/images/gallery"
+    firstImg,
+    secondImg,
+    thirdImg,
+    fourthImg,
+    fifthImg,
+    sixthImg,
+    seventhImg,
+    eightsImg,
+    ninethImg,
+} from "assets/images/heroGallery"
 
 const galleryImages = [
-    gallery1,
-    gallery2,
-    gallery3,
-    gallery4,
-    gallery5,
-    gallery6,
-    gallery7,
-    gallery8,
+    firstImg,
+    secondImg,
+    thirdImg,
+    fourthImg,
+    fifthImg,
+    sixthImg,
+    seventhImg,
+    eightsImg,
+    ninethImg,
 ]
 
 export function Gallery() {
