@@ -28,18 +28,20 @@
 .logoContainer {
     display: flex;
     align-items: flex-start;
-    width: 150px;
+    width: 100%;
     max-width: max-content;
     margin-left: 20px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.logo {
+    width: 100%;
 }
 
 @media (max-width: 960px) {
     .logoContainer {
         position: fixed;
         top: 1.5rem;
-    }
-
-    .logo {
-        width: 130px
     }
 }
