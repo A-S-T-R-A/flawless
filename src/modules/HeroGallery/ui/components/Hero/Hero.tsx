@@ -11,7 +11,6 @@ export function Hero({ showHero }: HeroProps) {
         [styles.hidden]: !showHero,
     })
 
-    console.log(showHero)
     return (
         <div className={className}>
             <div className={styles.logo}>Наши тусовки</div>

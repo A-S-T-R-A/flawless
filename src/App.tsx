@@ -10,7 +10,6 @@ export function App() {
         <div>
             <Navigation />
             <Main />
-            <Rules />
             <HeroGallery />
             <Rules />
             <Footer />

@@ -1,3 +1,13 @@
+.sliderBg {
+    height: 100%;
+    z-index: -1;
+    top: -100%;
+    left: 0;
+    opacity: 0.25;
+    pointer-events: none;
+    filter: blur(120px) saturate(10);
+}
+
 .sliderItem {
     max-height: 75vh;
     overflow: hidden;
@@ -13,17 +23,6 @@
     left: -100%;
     transition: var(--swiper-transition) !important;
     will-change: transform;
-}
-
-.sliderBg {
-    height: 100%;
-    z-index: -1;
-    transform: rotate(-20deg) !important;
-    top: -90vh;
-    left: -10vh;
-    opacity: 0.25;
-    pointer-events: none;
-    filter: blur(120px) saturate(10);
 }
 
 .sliderBg .sliderItem {
