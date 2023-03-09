@@ -1,0 +1,222 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    background: var(--color-black);
+    padding: 4rem 0 4rem 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-right: 2rem;
+}
+
+.headText {
+    font-family: var(--font-base);
+    color: var(--color-golden);
+    font-size: 64px;
+    line-height: 83.2px;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+}
+
+.introduction {
+    font-family: var(--font-alt);
+    color: var(--color-white);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    line-height: 28px;
+    font-size: 16px;
+    margin-top: 2rem;
+}
+
+.viewButton {
+    background-color: var(--accent-color);
+    color: var(--color-black);
+    font-family: var(--font-base);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    line-height: 28px;
+    font-size: 16px;
+    padding: 0.5rem 1.5rem;
+    border-radius: 1px;
+    border: none;
+    outline: 5px solid var(--accent-color);
+    box-shadow: 0 0 10px var(--accent-color);
+    cursor: pointer;
+}
+
+/* .app__gallery-content button {
+    margin-top: 1rem;
+} */
+
+.galleryImages {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    max-width: 60%;
+    position: relative;
+}
+
+.imagesContainer {
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+
+}
+
+.imagesContainer::-webkit-scrollbar {
+    display: none;
+}
+
+
+.imageIcon {
+    /* position: absolute;
+    color: #fff;
+    font-size: 2rem;
+    opacity: 0.5;
+    transition: 0.5s ease;
+    cursor: pointer; */
+    display: none;
+}
+
+
+
+.imagesCard:hover img {
+    opacity: 0.35;
+}
+
+.imagesCard:hover .imageIcon {
+    opacity: 1;
+}
+
+.imagesArrows {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+    position: absolute;
+    bottom: 5%;
+}
+
+.arrowIcon {
+    color: var(--color-golden);
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: var(--color-black);
+    border-radius: 5px;
+}
+
+.gallery__arrow-icon:hover {
+    color: var(--color-white);
+}
+
+
+
+
+/* .imagesCard {
+    position: relative;
+    min-width: 301px;
+    height: 447px;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagesCard img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: 0.5s ease;
+} */
+
+.img {
+    min-width: 301px;
+    height: 447px;
+    margin-right: 2rem;
+    object-fit: cover;
+    object-position: 40% center;
+}
+
+
+@media screen and (min-width: 2000px) {
+    .content {
+        min-width: 1000px;
+        padding-right: 4rem;
+    }
+
+    .img {
+        min-width: 400px;
+        height: 550px;
+    }
+
+    .viewButton {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (min-width: 1150px) {
+    .viewButton {
+        margin-top: 2rem;
+    }
+}
+
+
+@media screen and (max-width: 1150px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .galleryImages {
+        max-width: 100%;
+        margin: 5rem 0;
+    }
+
+    .viewButton {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .wrapper {
+        padding: 4rem 0rem 4rem 4rem;
+    }
+
+    .viewButton {
+        margin-top: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .wrapper {
+        padding: 4rem 0rem 4rem 2rem;
+    }
+
+    .content {
+        min-width: 100%;
+    }
+
+    .viewButton {
+        margin-top: 1rem;
+    }
+
+    .img {
+        min-width: 240px;
+        height: 320px;
+    }
+}

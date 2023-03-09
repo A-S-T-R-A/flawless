@@ -1,5 +1,4 @@
-import { Gallery } from "modules/Gallery"
-/* import { Gallery } from "modules/GalleryNoLib" */
+import { Gallery } from "modules/GalleryRest"
 import { Main } from "modules/Main"
 import { Navigation } from "modules/Navigation"
 import { Rules } from "modules/Rules"
