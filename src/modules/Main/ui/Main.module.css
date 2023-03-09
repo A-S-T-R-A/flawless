@@ -21,8 +21,7 @@
 }
 
 .title {
-    font-size: 48px;
-    line-height: 1;
+    width: 200px;
     margin-bottom: 20px;
 }
 
@@ -35,6 +34,11 @@
 
 .btnContainer {
     display: flex;
+}
+
+.logo {
+    max-width: 250px;
+    margin-bottom: 20px;
 }
 
 .btnContainer>* {

@@ -3,6 +3,8 @@ import styles from "./Navigation.module.css"
 import { Burger } from "./components/Burger"
 import { Navbar } from "./components/Navbar"
 import { classNames } from "modules/common/helpers/classNames"
+// import logo from "assets/images/logo.png"
+import logowhite from "assets/images/logowhite.png"
 
 export function Navigation() {
     const [navbarVisible, setNavbarVisible] = useState(false)
@@ -27,7 +29,11 @@ export function Navigation() {
     return (
         <div className={wrapperClassName}>
             <div className={styles.container}>
-                <div className={styles.logoContainer}>FLAWLESS</div>
+                <img
+                    className={styles.logoContainer}
+                    src={logowhite}
+                    alt="logo"
+                />
                 <Navbar />
                 <Burger />
             </div>
