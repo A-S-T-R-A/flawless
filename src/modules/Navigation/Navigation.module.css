@@ -2,18 +2,18 @@
     position: fixed;
     background-color: transparent;
     width: 100%;
-    min-height: fit-content;
+    min-height: 70px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 5;
-    transition: all 0.3s linear;
+    transition: all 0.2s linear;
 }
 
 .isScrolled {
-    background-color: var(--navbar-bg-color);
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
+    min-height: 40px;
 }
 
 .container {
@@ -23,7 +23,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* white; */
 }
 
 .logoContainer {
@@ -31,16 +30,9 @@
     align-items: center;
     width: 100%;
     max-width: max-content;
-    min-height: 80px;
     margin-left: 20px;
     font-size: 26px;
     font-weight: 700;
-    transition: all 0.3s linear;
-}
-
-.logoScale {
-    min-height: 40px;
-    font-size: 20px;
 }
 
 .logo {
@@ -58,13 +50,6 @@
 
     .logoContainer {
         position: fixed;
-        top: 1.3rem;
-        font-size: 20px;
-        min-height: 40px;
+        top: 1.5rem;
     }
-
-    .logoScale {
-        font-size: 20px;
-    }
-
 }
