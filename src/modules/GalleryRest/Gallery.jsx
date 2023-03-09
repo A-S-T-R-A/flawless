@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react"
+import React, { useEffect, useRef, useState, useCallback } from "react"
 
 import { BsZoomIn, BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs"
 
@@ -27,13 +27,45 @@ const galleryImages = [
     eightsImg,
     ninethImg,
 ]
-
 const slidesCount = galleryImages.length
+const innerWidth = window.innerWidth - 32
+
+const imgPath = innerWidth + 240
 
 export function Gallery() {
     const scrollRef = useRef(null)
-    const [currentIndex, setCurrentIndex] = useState(0)
-    const [currentPercent, setCurrentPercent] = useState(0)
+
+    const [bounds, setBounds] = useState([])
+
+    useEffect(() => {
+        function bounds() {
+            const scrollWidth = scrollRef.current.scrollWidth
+            const spacePerSlide = scrollWidth / slidesCount
+            const bounds = []
+            for (let i = 0; i < scrollWidth; i = i + spacePerSlide) {
+                bounds.push(i)
+            }
+
+            console.log(bounds)
+
+            setBounds(bounds) //[0, 270, 540, 810, 1080, 1350, 1620, 1890, 2160]
+            return bounds
+        }
+
+        const imgPercent = []
+
+        for (let item of bounds()) {
+            const x =
+                ((innerWidth - item) / imgPath) * 100 > 0
+                    ? ((innerWidth - item) / imgPath) * 100
+                    : 0
+            imgPercent.push(x)
+        }
+
+        setImgPercent(imgPercent)
+    }, [])
+
+    const [imgPercent, setImgPercent] = useState([])
 
     function scroll(direction) {
         if (direction === "left") {
@@ -44,8 +76,25 @@ export function Gallery() {
     }
 
     function onScrollX(e) {
-        const { scrollLeft, scrollWidth } = e.target
+        const { scrollLeft } = e.target
 
+        const viewport = [scrollLeft, scrollLeft + innerWidth]
+
+        const imgPercent = []
+
+        for (let item of bounds) {
+            const x =
+                ((viewport[1] - item) / imgPath) * 100 > 0
+                    ? ((viewport[1] - item) / imgPath) * 100
+                    : 0
+            imgPercent.push(x)
+        }
+
+        setImgPercent(imgPercent)
+
+        //console.log(enteringIn, exitingIn)
+
+        /* 
         const x = (scrollLeft / scrollWidth) * 100
 
         const spacePerSlide = scrollWidth / slidesCount
@@ -53,18 +102,15 @@ export function Gallery() {
         const currentSlidePercentage =
             ((scrollLeft % spacePerSlide) / spacePerSlide) * 100
 
-        const currentPosition = scrollLeft / spacePerSlide
+        const currentPosition = scrollLeft / slidesCount
 
-        console.log(currentPosition)
+        console.log(bounds)
 
         setCurrentIndex(currentSlideIndex)
-        setCurrentPercent(x)
-
-        //if index === currentIndex, then this img is in viewport.
-        //So it has to be translated.
-
-        /* setPercent(x) */
+        setCurrentPercent(x) */
     }
+
+    console.log(imgPercent)
 
     return (
         <div className={styles.wrapper}>
@@ -84,10 +130,7 @@ export function Gallery() {
                     onScroll={onScrollX}
                 >
                     {galleryImages.map((image, index) => {
-                        /* const percent =
-                            index === currentIndex || index === currentIndex + 1
-                                ? currentPercent
-                                : 0 */
+                        const percent = imgPercent[index]
 
                         return (
                             <img
@@ -97,10 +140,7 @@ export function Gallery() {
                                 className={styles.img}
                                 draggable={false}
                                 style={{
-                                    objectPosition: `${
-                                        /* 30 + percent / 1.45 */
-                                        currentPercent
-                                    }% center`,
+                                    objectPosition: `${100 - percent}% center`,
                                 }}
                             />
                         )
