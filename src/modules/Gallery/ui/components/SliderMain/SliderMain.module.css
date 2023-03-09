@@ -31,8 +31,8 @@
     will-change: transform;
 }
 
-.sliderItem.slideOpen {
+/* .sliderItem.slideOpen {
     transform: rotate(-15deg) scale(1.45) !important;
     z-index: 3 !important;
     box-shadow: rgba(0, 0, 0, .75) 0 0 0 10000px;
-}
+} */
