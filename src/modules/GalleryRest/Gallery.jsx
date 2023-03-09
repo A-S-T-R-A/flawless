@@ -74,7 +74,9 @@ export function Gallery() {
                             className={styles.img}
                             draggable={false}
                             style={{
-                                objectPosition: `${30 + percent / 2}% center`,
+                                objectPosition: `${
+                                    30 + percent / 1.45
+                                }% center`,
                             }}
                         />
                     ))}
