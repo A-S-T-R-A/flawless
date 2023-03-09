@@ -29,13 +29,12 @@ const galleryImages = [
 export function Gallery() {
     const scrollRef = useRef(null)
     const [percent, setPercent] = useState(0)
-    const [scrollX, setScrollX] = useState(0)
 
     function scroll(direction) {
         if (direction === "left") {
-            scrollRef.current.scrollLeft -= 300
+            scrollRef.current.scrollLeft -= 240
         } else {
-            scrollRef.current.scrollLeft += 300
+            scrollRef.current.scrollLeft += 240
         }
     }
 

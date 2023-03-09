@@ -148,9 +148,9 @@
 .img {
     min-width: 301px;
     height: 447px;
-    margin-right: 2rem;
+    margin-right: 30px;
     object-fit: cover;
-    object-position: 40% center;
+    object-position: 30% center;
 }
 
 
