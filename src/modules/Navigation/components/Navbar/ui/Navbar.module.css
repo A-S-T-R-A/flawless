@@ -17,6 +17,7 @@
     .navBar {
         width: 100%;
         display: flex;
+        max-height: 30px;
         justify-content: flex-end;
         align-items: center;
         margin-left: 40px;
