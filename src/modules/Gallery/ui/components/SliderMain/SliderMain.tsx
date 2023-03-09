@@ -37,6 +37,7 @@ export function SliderMain({ controlledSwiper }: SliderMainProps) {
             controller={{ control: controlledSwiper }}
             mousewheel={false}
             parallax
+            touchRatio={10}
             navigation={{
                 nextEl: "#nextStaff",
                 prevEl: "#prevStaff",
