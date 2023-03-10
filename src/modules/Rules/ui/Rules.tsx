@@ -11,7 +11,7 @@ export function Rules() {
     })
 
     return (
-        <div className={styles.wrapper}>
+        <div className={styles.wrapper} id="rules">
             <div
                 className={styles.container}
                 data-aos="fade-up"

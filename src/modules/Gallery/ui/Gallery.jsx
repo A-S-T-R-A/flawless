@@ -53,7 +53,11 @@ export function Gallery() {
     }
 
     return (
-        <div className={styles.wrapper} onMouseMove={mouseMoveHandler}>
+        <div
+            className={styles.wrapper}
+            onMouseMove={mouseMoveHandler}
+            id="gallery"
+        >
             <Content />
             <ImagesGallery
                 percent={percent}

@@ -12,7 +12,7 @@ export function Hero() {
     })
 
     return (
-        <section className={styles.wrapper}>
+        <section className={styles.wrapper} id="about">
             <div className={styles.container}>
                 <div className={styles.imgContainer}>
                     <img
