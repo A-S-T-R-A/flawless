@@ -14,7 +14,7 @@ export function Main() {
             style={{ height: height + "px" }}
             id="main"
         >
-            {/* <VideoBg src={video} /> */}
+            <VideoBg src={video} />
             <div className={styles.container}>
                 <div className={styles.content}>
                     <h1 className={styles.title}>FLAWLESS</h1>
