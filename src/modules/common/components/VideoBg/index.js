@@ -1,2 +1,3 @@
 //@ts-ignore
-export { VideoBg } from "./VideoBg"
+import { VideoBg } from "./VideoBg"
+export { VideoBg }
