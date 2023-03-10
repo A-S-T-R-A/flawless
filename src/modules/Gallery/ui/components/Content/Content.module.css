@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     padding: 20px;
     margin: 0 50px;
@@ -15,7 +15,8 @@
 }
 
 .introduction {
-    margin: 30px 0;
+    text-align: center;
+    margin: 30px;
 }
 
 @media (max-width: 768px) {
