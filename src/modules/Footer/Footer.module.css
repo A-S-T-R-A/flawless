@@ -18,17 +18,15 @@
 .content {
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    grid-row-gap: 50px;
-    grid-template-areas:
-        "phone email socialIcons";
-    grid-template-columns: 1fr 1fr 1fr;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 10px;
     margin-bottom: 20px;
 }
 
 .phone {
-    width: 100%;
-    grid-area: phone;
+    min-width: 225px;
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,8 +34,8 @@
 }
 
 .email {
-    width: 100%;
-    grid-area: email;
+    width: 30%;
+    min-width: 225px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -61,17 +59,9 @@
     color: var(--main-text-color);
 }
 
-.slogan {
-    width: 100%;
-    grid-area: slogan;
-    display: flex;
-    justify-content: center;
-    color: var(--gray-color);
-}
-
 .socialIcons {
-    width: 100%;
-    grid-area: socialIcons;
+    width: 30%;
+    min-width: 225px;
     display: flex;
     justify-content: center;
 }
@@ -79,29 +69,4 @@
 .icons {
     justify-content: space-between;
     font-size: 30px;
-}
-
-@media (max-width: 651px) {
-    .content {
-        grid-template-columns: 1fr 1fr;
-
-        grid-template-areas:
-            "phone email"
-            "socialIcons socialIcons";
-    }
-}
-
-@media (max-width: 481px) {
-    .content {
-        grid-row-gap: 20px;
-
-        grid-template-columns: 1fr;
-
-        grid-template-areas:
-            "phone"
-            "email"
-            "socialIcons";
-
-        flex-direction: column;
-    }
 }

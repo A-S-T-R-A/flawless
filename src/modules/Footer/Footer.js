@@ -34,9 +34,9 @@ function Footer() {
                             flawlessdynastybe@gmail.com
                         </a>
                     </div>
-                </div>
-                <div className={styles.socialIcons}>
-                    <SocialIcons className={styles.icons} />
+                    <div className={styles.socialIcons}>
+                        <SocialIcons className={styles.icons} />
+                    </div>
                 </div>
             </div>
         </footer>

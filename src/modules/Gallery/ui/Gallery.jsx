@@ -1,3 +1,5 @@
+import { NeonButton } from "modules/common/components/NeonButton/NeonButton"
+import NeonText from "modules/common/components/NeonText/NeonText"
 import { useEffect, useRef, useState } from "react"
 import Content from "./components/Content/Content"
 import ImagesGallery from "./components/ImagesGallery/ImagesGallery"
@@ -59,8 +61,6 @@ export function Gallery() {
             id="gallery"
         >
             {/* <Content /> */}
-
-            <h1 className={styles.title}>GALLERY</h1>
             <ImagesGallery
                 percent={percent}
                 scrollRef={scrollRef}
@@ -71,6 +71,7 @@ export function Gallery() {
                 imageOpen={imageOpen}
                 setImageOpen={setImageOpen}
             />
+            <NeonButton className={styles.btn}>BUY TICKETS</NeonButton>
         </div>
     )
 }
