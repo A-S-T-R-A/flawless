@@ -152,7 +152,7 @@
     object-fit: cover;
     object-position: 30% center;
     /* 
-    transition: object-position 0.2s; */
+    transition: object-position 0.05s; */
 }
 
 

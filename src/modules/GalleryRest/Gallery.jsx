@@ -1,4 +1,10 @@
-import React, { useEffect, useRef, useState, useCallback } from "react"
+import React, {
+    useEffect,
+    useRef,
+    useState,
+    useCallback,
+    useLayoutEffect,
+} from "react"
 
 import { BsZoomIn, BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs"
 
@@ -15,6 +21,7 @@ import {
     eightsImg,
     ninethImg,
 } from "assets/images/heroGallery"
+import Image from "./components/Image/Image"
 
 const galleryImages = [
     firstImg,
@@ -36,27 +43,24 @@ export function Gallery() {
     const scrollRef = useRef(null)
 
     const [bounds, setBounds] = useState([])
+    const [firstRender, setFirstRender] = useState(true)
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         const scrollWidth = scrollRef.current.scrollWidth
         const spacePerSlide = scrollWidth / slidesCount
         const bounds = []
         for (let i = 0; i < scrollWidth; i = i + spacePerSlide) {
             bounds.push(i)
         }
-
-        console.log(bounds)
-
         setBounds(bounds) //[0, 270, 540, 810, 1080, 1350, 1620, 1890, 2160]
-
         const imgPercent = []
 
         for (let item of bounds) {
             const x = ((innerWidth - item) / imgPath) * 100
             imgPercent.push(Math.min(Math.max(x, 0), 100))
         }
-
         setImgPercent(imgPercent)
+        setFirstRender(false)
     }, [])
 
     const [imgPercent, setImgPercent] = useState([])
@@ -71,17 +75,13 @@ export function Gallery() {
 
     function onScrollX(e) {
         const { scrollLeft } = e.target
-
         const viewport = [scrollLeft, scrollLeft + innerWidth]
-
         const imgPercent = []
-
         for (let bound of bounds) {
             const x = ((viewport[1] - bound) / imgPath) * 100
 
             imgPercent.push(Math.min(Math.max(x, 0), 100))
         }
-
         setImgPercent(imgPercent)
     }
 
@@ -107,18 +107,7 @@ export function Gallery() {
                     {galleryImages.map((image, index) => {
                         const percent = imgPercent[index]
 
-                        return (
-                            <img
-                                key={index}
-                                src={image}
-                                alt=""
-                                className={styles.img}
-                                draggable={false}
-                                style={{
-                                    objectPosition: `${100 - percent}% center`,
-                                }}
-                            />
-                        )
+                        return <Image percent={percent} image={image} />
                     })}
                 </div>
                 <div className={styles.imagesArrows}>
