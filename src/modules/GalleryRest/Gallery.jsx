@@ -26,35 +26,10 @@ const galleryImages = [
     seventhImg,
     eightsImg,
 ]
-/* const slidesCount = galleryImages.length
-const innerWidth = window.innerWidth - 32
-
-const imgPath = innerWidth + 240 */
 
 export function Gallery() {
     const scrollRef = useRef(null)
     const [percent, setPercent] = useState(0)
-
-    /* const [bounds, setBounds] = useState([])
-
-    useLayoutEffect(() => {
-        const scrollWidth = scrollRef.current.scrollWidth
-        const spacePerSlide = scrollWidth / slidesCount
-        const bounds = []
-        for (let i = 0; i < scrollWidth; i = i + spacePerSlide) {
-            bounds.push(i)
-        }
-        setBounds(bounds) //[0, 270, 540, 810, 1080, 1350, 1620, 1890, 2160]
-        const imgPercent = []
-
-        for (let item of bounds) {
-            const x = ((innerWidth - item) / imgPath) * 100
-            imgPercent.push(Math.min(Math.max(x, 0), 100))
-        }
-        setImgPercent(imgPercent)
-    }, []) */
-
-    /*  const [imgPercent, setImgPercent] = useState([]) */
 
     function scroll(direction) {
         if (direction === "left") {
@@ -64,26 +39,10 @@ export function Gallery() {
         }
     }
 
-    /* const onScrollX = throttle(e => {
-        const { scrollLeft } = e.target
-        const imgPercent = []
-        for (let bound of bounds) {
-            const x = ((scrollLeft + innerWidth - bound) / imgPath) * 100
-            imgPercent.push(Math.min(Math.max(x, 0), 100))
-        }
-        setImgPercent(imgPercent)
-        console.log("fired")
-    }, 1000) */
-
-    const onScrollX = e => {
+    function onScrollX(e) {
         const { scrollLeft, scrollWidth } = e.target
-
-        const percent = (scrollLeft / scrollWidth) * 100
-        setPercent(percent)
-        console.log("first")
+        setPercent((scrollLeft / scrollWidth) * 100)
     }
-
-    //console.log(imgPercent)
 
     return (
         <div className={styles.wrapper}>
@@ -104,10 +63,14 @@ export function Gallery() {
                 >
                     {galleryImages.map((image, index) => {
                         return (
-                            <Image
-                                key={index}
-                                percent={percent}
-                                image={image}
+                            <img
+                                src={image}
+                                alt=""
+                                className={styles.img}
+                                draggable={false}
+                                style={{
+                                    objectPosition: `${100 - percent}% center`,
+                                }}
                             />
                         )
                     })}
