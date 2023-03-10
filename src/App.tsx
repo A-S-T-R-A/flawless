@@ -1,3 +1,4 @@
+import { Hero } from "modules/Hero"
 import { Main } from "modules/Main"
 import { Navigation } from "modules/Navigation"
 import { Rules } from "modules/Rules"
@@ -9,6 +10,7 @@ export function App() {
         <div>
             <Navigation />
             <Main />
+            <Hero />
             <Rules />
             <Footer />
         </div>
