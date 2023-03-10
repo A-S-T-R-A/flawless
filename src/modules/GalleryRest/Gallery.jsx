@@ -1,4 +1,4 @@
-import { useRef, useState, useLayoutEffect } from "react"
+import { useRef, useState, useLayoutEffect, useEffect } from "react"
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs"
 import styles from "./Gallery.module.css"
 import throttle from "lodash.throttle"
@@ -64,7 +64,7 @@ export function Gallery() {
         }
     }
 
-    const onScrollX = throttle(e => {
+    /* const onScrollX = throttle(e => {
         const { scrollLeft } = e.target
         const imgPercent = []
         for (let bound of bounds) {
@@ -73,7 +73,22 @@ export function Gallery() {
         }
         setImgPercent(imgPercent)
         console.log("fired")
-    }, 100)
+    }, 1000) */
+
+    const onScrollX = throttle(
+        e => {
+            const { scrollLeft } = e.target
+            const imgPercent = []
+            for (let bound of bounds) {
+                const x = ((scrollLeft + innerWidth - bound) / imgPath) * 100
+                imgPercent.push(Math.min(Math.max(x, 0), 100))
+            }
+            setImgPercent(imgPercent)
+            console.log("first")
+        },
+        20,
+        { leading: false }
+    )
 
     //console.log(imgPercent)
 
