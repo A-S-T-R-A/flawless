@@ -20,6 +20,8 @@ body {
     color: var(--main-text-color);
     font-family: 'Montserrat', sans-serif;
     background-color: var(--main-bg-color);
+
+    overflow-x: hidden;
 }
 
 :root {
@@ -44,6 +46,10 @@ body {
     --warning-color: red;
     /* Heights */
     --navbar-height: 70px;
+
+    /* Swiper */
+    --sizeindex: calc(1vw + 1vh);
+    --swiper-transition: .75s cubic-bezier(.2, .6, 0, 1);
 }
 
 a,

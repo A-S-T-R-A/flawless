@@ -1,3 +1,4 @@
+import { Gallery } from "modules/Gallery"
 import { Hero } from "modules/Hero"
 import { Main } from "modules/Main"
 import { Navigation } from "modules/Navigation"
@@ -12,6 +13,7 @@ export function App() {
             <Main />
             <Hero />
             <Rules />
+            <Gallery />
             <Footer />
         </div>
     )
