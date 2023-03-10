@@ -1,5 +1,4 @@
 import { Gallery } from "modules/GalleryRest"
-import { Gallery as GallerySwiper } from "modules/Gallery"
 import { Main } from "modules/Main"
 import { Navigation } from "modules/Navigation"
 import { Rules } from "modules/Rules"
@@ -14,8 +13,6 @@ export function App() {
             <Rules />
             <Rules />
             <Gallery />
-            <GallerySwiper />
-            <Rules />
             <Footer />
         </div>
     )

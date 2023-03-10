@@ -1,0 +1,30 @@
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.headText {
+    font-size: var(--font-title);
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.introduction {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+@media (min-width: 650px) {
+    .content {
+        display: flex;
+    }
+}
+
+@media(min-width:1025px) {
+    .content {
+        margin-right: 20px;
+    }
+}

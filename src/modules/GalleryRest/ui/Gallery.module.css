@@ -1,0 +1,14 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+@media (min-width:1025px) {
+    .wrapper {
+        flex-direction: row-reverse;
+    }
+}
