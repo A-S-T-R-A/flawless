@@ -1,31 +1,25 @@
 .content {
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
     padding: 20px;
+    margin: 0 50px;
 }
 
 .headText {
     font-size: var(--font-title);
     letter-spacing: 0.04em;
     text-transform: capitalize;
-    margin-bottom: 10px;
 }
 
 .introduction {
-    margin-bottom: 20px;
-    text-align: center;
+    margin: 30px 0;
 }
 
-@media (min-width: 650px) {
+@media (max-width: 768px) {
     .content {
-        display: flex;
-    }
-}
-
-@media(min-width:1025px) {
-    .content {
-        margin-right: 20px;
+        width: 90%;
     }
 }
