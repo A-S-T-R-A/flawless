@@ -15,8 +15,9 @@ export function Main() {
                 <div className={styles.content}>
                     <h1 className={styles.title}>FLAWLESS</h1>
                     <p className={styles.description}>
-                        An all-encompassing nightlife experience with a variety
-                        of atmospheres and world-renowned musical talent.
+                        "Мы не просто создаем вечеринки, мы создаем волшебные
+                        моменты, которые оживляются в памяти каждый раз, когда о
+                        них вспоминаешь!"
                     </p>
                     <div className={styles.btnContainer}>
                         <NeonButton>BUY TICKETS</NeonButton>
