@@ -12,8 +12,8 @@ export function App() {
             <Navigation />
             <Main />
             <Hero />
-            <Gallery />
             <Rules />
+            <Gallery />
             <Footer />
         </div>
     )
