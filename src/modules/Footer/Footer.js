@@ -3,7 +3,7 @@ import styles from "./Footer.module.css"
 
 function Footer() {
     return (
-        <footer className={styles.wrapper} id="footer">
+        <footer className={styles.wrapper} id="contacts">
             <div className={styles.container}>
                 <div className={styles.content}>
                     <div className={styles.phone}>
