@@ -16,14 +16,17 @@ function Content() {
             data-aos-duration="800"
             data-aos-once
         >
-            <h1 className={styles.headText}>Фотогалерея</h1>
+            <h1 className={styles.headText}>Наши Тусовки</h1>
             <p className={styles.introduction}>
                 Лучше тусовки на диком западе. Залетайте к нам - у нас круто.
                 Лучше тусовки на диком западе. Залетайте к нам - у нас круто.
                 Лучше тусовки на диком западе. Залетайте к нам - у нас круто.
                 Лучше тусовки на диком западе. Залетайте к нам - у нас круто.
             </p>
-            <NeonButton className={styles.btn}>ЗАЛЕТЕТЬ</NeonButton>
+            <NeonButton className={styles.btn}>BUY TICKETS</NeonButton>
+            {/* <h1 className={styles.title}>FLAWLESS</h1>
+            <p className={styles.description}>BEST PARTIES EVER</p>
+            <NeonButton>BUY TICKETS</NeonButton> */}
         </div>
     )
 }

@@ -35,7 +35,7 @@ body {
     --font-title: 32px;
 
     /* Colors */
-    --main-bg-color: #0f061f;
+    --main-bg-color: #020006;
     --navbar-bg-color: #1f202923;
     --modal-bg-color: #000000;
     --main-text-color: #f1f1f1;
@@ -46,7 +46,7 @@ body {
     --lightgray-color: #e4e4e4;
     --warning-color: red;
     /* Heights */
-    --navbar-height: 70px;
+    --navbar-height: 50px;
 
     /* Swiper */
     --sizeindex: calc(1vw + 1vh);
