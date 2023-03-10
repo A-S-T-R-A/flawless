@@ -38,7 +38,8 @@
 }
 
 .title {
-    font-size: 32px;
+    font-size: var(--font-title);
+    text-align: center;
 }
 
 .list {
@@ -88,11 +89,5 @@
 
     .content {
         min-width: 0;
-    }
-}
-
-@media (max-width:480px) {
-    .title {
-        font-size: 23px;
     }
 }
