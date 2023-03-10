@@ -10,5 +10,8 @@
 @media (min-width:1025px) {
     .wrapper {
         flex-direction: row;
+        margin: 0 auto;
+        max-width: 1600px;
+        padding: 40px 0;
     }
 }
