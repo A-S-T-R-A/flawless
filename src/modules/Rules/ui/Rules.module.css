@@ -2,11 +2,11 @@
     max-width: 1200px;
     height: 100%;
     margin: 0 auto;
-    padding: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding: var(--navbar-height) 0;
 }
 
 .title {

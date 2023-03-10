@@ -14,15 +14,11 @@ export function Main() {
             style={{ height: height + "px" }}
             id="main"
         >
-            <VideoBg src={video} />
+            {/* <VideoBg src={video} /> */}
             <div className={styles.container}>
                 <div className={styles.content}>
                     <h1 className={styles.title}>FLAWLESS</h1>
-                    <p className={styles.description}>
-                        "Мы не просто создаем вечеринки, мы создаем волшебные
-                        моменты, которые оживляются в памяти каждый раз, когда о
-                        них вспоминаешь!"
-                    </p>
+                    <p className={styles.description}>BEST PARTIES EVER</p>
                     <div className={styles.btnContainer}>
                         <NeonButton>BUY TICKETS</NeonButton>
                     </div>
