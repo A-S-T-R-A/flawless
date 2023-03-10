@@ -5,6 +5,7 @@ import { NeonButton } from "modules/common/components/NeonButton/NeonButton"
 import styles from "./Hero.module.css"
 import Aos from "aos"
 import "aos/dist/aos.css"
+import NeonText from "modules/common/components/NeonText/NeonText"
 
 export function Hero() {
     useEffect(() => {
@@ -31,7 +32,10 @@ export function Hero() {
                     data-aos-delay="300"
                     data-aos-once
                 >
-                    <h1 className={styles.title}>Flawless Dynasty Party</h1>
+                    <h1 className={styles.title}>
+                        Flawless Dynasty{" "}
+                        <NeonText className={styles.neon}>Party</NeonText>
+                    </h1>
                     <ul className={styles.list}>
                         {heroList.map(item => {
                             return (

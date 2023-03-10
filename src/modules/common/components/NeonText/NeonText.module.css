@@ -1,0 +1,33 @@
+.neonText {
+    animation: flicker 2.5s infinite alternate;
+    color: var(--main-text-color);
+    font-family: "Yellowtail", sans-serif;
+    letter-spacing: 4px;
+}
+
+@keyframes flicker {
+
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+
+        text-shadow:
+            0 0 19px var(--main-text-color),
+            0 0 25px var(--accent-color),
+            0 0 30px var(--accent-color),
+            0 0 45px var(--accent-color),
+            0 0 50px var(--accent-color),
+            0 0 60px var(--accent-color);
+
+    }
+
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+    }
+}

@@ -43,6 +43,10 @@
     text-align: center;
 }
 
+.neon {
+    font-size: 40px;
+}
+
 .list {
     min-height: 450px;
     list-style-type: none;
