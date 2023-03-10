@@ -10,7 +10,7 @@ export function Gallery() {
     return (
         <div className={styles.container}>
             <SliderMain controlledSwiper={controlledSwiper} />
-            <SliderBg setControlledSwiper={setControlledSwiper} />
+            {/*  <SliderBg setControlledSwiper={setControlledSwiper} /> */}
             <SwiperNav />
         </div>
     )

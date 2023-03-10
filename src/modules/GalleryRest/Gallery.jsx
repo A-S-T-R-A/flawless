@@ -25,17 +25,17 @@ const galleryImages = [
     sixthImg,
     seventhImg,
     eightsImg,
-    ninethImg,
 ]
-const slidesCount = galleryImages.length
+/* const slidesCount = galleryImages.length
 const innerWidth = window.innerWidth - 32
 
-const imgPath = innerWidth + 240
+const imgPath = innerWidth + 240 */
 
 export function Gallery() {
     const scrollRef = useRef(null)
+    const [percent, setPercent] = useState(0)
 
-    const [bounds, setBounds] = useState([])
+    /* const [bounds, setBounds] = useState([])
 
     useLayoutEffect(() => {
         const scrollWidth = scrollRef.current.scrollWidth
@@ -52,9 +52,9 @@ export function Gallery() {
             imgPercent.push(Math.min(Math.max(x, 0), 100))
         }
         setImgPercent(imgPercent)
-    }, [])
+    }, []) */
 
-    const [imgPercent, setImgPercent] = useState([])
+    /*  const [imgPercent, setImgPercent] = useState([]) */
 
     function scroll(direction) {
         if (direction === "left") {
@@ -75,20 +75,13 @@ export function Gallery() {
         console.log("fired")
     }, 1000) */
 
-    const onScrollX = throttle(
-        e => {
-            const { scrollLeft } = e.target
-            const imgPercent = []
-            for (let bound of bounds) {
-                const x = ((scrollLeft + innerWidth - bound) / imgPath) * 100
-                imgPercent.push(Math.min(Math.max(x, 0), 100))
-            }
-            setImgPercent(imgPercent)
-            console.log("first")
-        },
-        20,
-        { leading: false }
-    )
+    const onScrollX = e => {
+        const { scrollLeft, scrollWidth } = e.target
+
+        const percent = (scrollLeft / scrollWidth) * 100
+        setPercent(percent)
+        console.log("first")
+    }
 
     //console.log(imgPercent)
 
@@ -110,8 +103,6 @@ export function Gallery() {
                     onScroll={onScrollX}
                 >
                     {galleryImages.map((image, index) => {
-                        const percent = imgPercent[index]
-
                         return (
                             <Image
                                 key={index}

@@ -153,6 +153,7 @@
     object-position: 30% center;
 
     transition: object-position 2000ms;
+    will-change: object-position;
 }
 
 
