@@ -27,7 +27,15 @@ export function Navigation() {
     return (
         <div className={wrapperClassName}>
             <div className={styles.container}>
-                <div className={styles.logoContainer}>FLAWLESS</div>
+                <div
+                    className={classNames(
+                        styles.logoContainer,
+                        { [styles.logoScale]: navbarVisible },
+                        []
+                    )}
+                >
+                    FLAWLESS
+                </div>
                 <Navbar />
                 <Burger />
             </div>

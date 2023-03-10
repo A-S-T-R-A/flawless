@@ -37,7 +37,10 @@ function ImagesGallery({
                                 className={styles.img}
                                 draggable={false}
                                 style={{
-                                    objectPosition: `${100 - percent}% center`,
+                                    objectPosition: `${
+                                        100 -
+                                        (index % 2 ? percent * 0.8 : percent)
+                                    }% center`,
                                 }}
                                 onMouseUp={e => onImageOpen(e, index)}
                             />
