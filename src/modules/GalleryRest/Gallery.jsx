@@ -1,14 +1,7 @@
-import React, {
-    useEffect,
-    useRef,
-    useState,
-    useCallback,
-    useLayoutEffect,
-} from "react"
-
-import { BsZoomIn, BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs"
-
+import { useRef, useState, useLayoutEffect } from "react"
+import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs"
 import styles from "./Gallery.module.css"
+import throttle from "lodash.throttle"
 
 import {
     firstImg,
@@ -43,7 +36,6 @@ export function Gallery() {
     const scrollRef = useRef(null)
 
     const [bounds, setBounds] = useState([])
-    const [firstRender, setFirstRender] = useState(true)
 
     useLayoutEffect(() => {
         const scrollWidth = scrollRef.current.scrollWidth
@@ -60,7 +52,6 @@ export function Gallery() {
             imgPercent.push(Math.min(Math.max(x, 0), 100))
         }
         setImgPercent(imgPercent)
-        setFirstRender(false)
     }, [])
 
     const [imgPercent, setImgPercent] = useState([])
@@ -73,19 +64,18 @@ export function Gallery() {
         }
     }
 
-    function onScrollX(e) {
+    const onScrollX = throttle(e => {
         const { scrollLeft } = e.target
-        const viewport = [scrollLeft, scrollLeft + innerWidth]
         const imgPercent = []
         for (let bound of bounds) {
-            const x = ((viewport[1] - bound) / imgPath) * 100
-
+            const x = ((scrollLeft + innerWidth - bound) / imgPath) * 100
             imgPercent.push(Math.min(Math.max(x, 0), 100))
         }
         setImgPercent(imgPercent)
-    }
+        console.log("fired")
+    }, 100)
 
-    console.log(imgPercent)
+    //console.log(imgPercent)
 
     return (
         <div className={styles.wrapper}>
@@ -107,7 +97,13 @@ export function Gallery() {
                     {galleryImages.map((image, index) => {
                         const percent = imgPercent[index]
 
-                        return <Image percent={percent} image={image} />
+                        return (
+                            <Image
+                                key={index}
+                                percent={percent}
+                                image={image}
+                            />
+                        )
                     })}
                 </div>
                 <div className={styles.imagesArrows}>
