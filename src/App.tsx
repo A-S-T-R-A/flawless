@@ -1,4 +1,4 @@
-import { Gallery } from "modules/GalleryRest"
+import { Gallery } from "modules/Gallery"
 import { Main } from "modules/Main"
 import { Navigation } from "modules/Navigation"
 import { Rules } from "modules/Rules"
@@ -11,8 +11,8 @@ export function App() {
             <Navigation />
             <Main />
             <Rules />
-            <Rules />
             <Gallery />
+            <Rules />
             <Footer />
         </div>
     )

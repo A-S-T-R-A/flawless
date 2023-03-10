@@ -54,6 +54,7 @@ export function Gallery() {
 
     return (
         <div className={styles.wrapper} onMouseMove={mouseMoveHandler}>
+            <Content />
             <ImagesGallery
                 percent={percent}
                 scrollRef={scrollRef}
@@ -64,7 +65,6 @@ export function Gallery() {
                 imageOpen={imageOpen}
                 setImageOpen={setImageOpen}
             />
-            <Content />
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import { Fragment } from "react"
-import { galleryImages } from "modules/GalleryRest"
+import { galleryImages } from "../../../index"
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs"
 import ModalImage from "../ModalImage/ModalImage"
 import styles from "./ImagesGallery.module.css"

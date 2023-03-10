@@ -9,6 +9,6 @@
 
 @media (min-width:1025px) {
     .wrapper {
-        flex-direction: row-reverse;
+        flex-direction: row;
     }
 }
