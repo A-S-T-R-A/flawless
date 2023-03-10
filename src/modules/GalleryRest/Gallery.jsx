@@ -38,28 +38,22 @@ export function Gallery() {
     const [bounds, setBounds] = useState([])
 
     useEffect(() => {
-        function bounds() {
-            const scrollWidth = scrollRef.current.scrollWidth
-            const spacePerSlide = scrollWidth / slidesCount
-            const bounds = []
-            for (let i = 0; i < scrollWidth; i = i + spacePerSlide) {
-                bounds.push(i)
-            }
-
-            console.log(bounds)
-
-            setBounds(bounds) //[0, 270, 540, 810, 1080, 1350, 1620, 1890, 2160]
-            return bounds
+        const scrollWidth = scrollRef.current.scrollWidth
+        const spacePerSlide = scrollWidth / slidesCount
+        const bounds = []
+        for (let i = 0; i < scrollWidth; i = i + spacePerSlide) {
+            bounds.push(i)
         }
+
+        console.log(bounds)
+
+        setBounds(bounds) //[0, 270, 540, 810, 1080, 1350, 1620, 1890, 2160]
 
         const imgPercent = []
 
-        for (let item of bounds()) {
-            const x =
-                ((innerWidth - item) / imgPath) * 100 > 0
-                    ? ((innerWidth - item) / imgPath) * 100
-                    : 0
-            imgPercent.push(x)
+        for (let item of bounds) {
+            const x = ((innerWidth - item) / imgPath) * 100
+            imgPercent.push(Math.min(Math.max(x, 0), 100))
         }
 
         setImgPercent(imgPercent)
@@ -82,32 +76,13 @@ export function Gallery() {
 
         const imgPercent = []
 
-        for (let item of bounds) {
-            const x =
-                ((viewport[1] - item) / imgPath) * 100 > 0
-                    ? ((viewport[1] - item) / imgPath) * 100
-                    : 0
-            imgPercent.push(x)
+        for (let bound of bounds) {
+            const x = ((viewport[1] - bound) / imgPath) * 100
+
+            imgPercent.push(Math.min(Math.max(x, 0), 100))
         }
 
         setImgPercent(imgPercent)
-
-        //console.log(enteringIn, exitingIn)
-
-        /* 
-        const x = (scrollLeft / scrollWidth) * 100
-
-        const spacePerSlide = scrollWidth / slidesCount
-        const currentSlideIndex = Math.floor(scrollLeft / spacePerSlide)
-        const currentSlidePercentage =
-            ((scrollLeft % spacePerSlide) / spacePerSlide) * 100
-
-        const currentPosition = scrollLeft / slidesCount
-
-        console.log(bounds)
-
-        setCurrentIndex(currentSlideIndex)
-        setCurrentPercent(x) */
     }
 
     console.log(imgPercent)
