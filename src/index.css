@@ -37,7 +37,7 @@ body {
     /* Colors */
     --main-bg-color: #0f061f;
     --navbar-bg-color: #1f202923;
-    --modal-bg-color: #101825;
+    --modal-bg-color: #000000;
     --main-text-color: #f1f1f1;
     /* --accent-color: #743AD0; */
     --accent-color: rgb(255, 20, 189);
