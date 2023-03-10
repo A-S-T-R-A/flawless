@@ -4,6 +4,7 @@ import styles from "./Rules.module.css"
 //@ts-ignore
 import Aos from "aos"
 import "aos/dist/aos.css"
+import NeonText from "modules/common/components/NeonText/NeonText"
 
 export function Rules() {
     useEffect(() => {
@@ -18,7 +19,10 @@ export function Rules() {
                 data-aos-duration="800"
                 data-aos-once
             >
-                <h3 className={styles.title}>ПРАВИЛА НАШИХ ТУСОВОК</h3>
+                <h1 className={styles.title}>
+                    Our {/* Rules */}
+                    <NeonText className={styles.neon}>Rules</NeonText>
+                </h1>
                 <ul className={styles.list}>
                     {rulesList.map(item => {
                         return (
