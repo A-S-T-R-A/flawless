@@ -1,5 +1,6 @@
 .wrapper {
     position: relative;
+    background-image: url('assets/images/main/first.webp');
 }
 
 .container {
