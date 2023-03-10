@@ -46,7 +46,7 @@ body {
     --lightgray-color: #e4e4e4;
     --warning-color: red;
     /* Heights */
-    --navbar-height: 70px;
+    --navbar-height: 50px;
 
     /* Swiper */
     --sizeindex: calc(1vw + 1vh);

@@ -58,7 +58,9 @@ export function Gallery() {
             onMouseMove={mouseMoveHandler}
             id="gallery"
         >
-            <Content />
+            {/* <Content /> */}
+
+            <h1 className={styles.title}>GALLERY</h1>
             <ImagesGallery
                 percent={percent}
                 scrollRef={scrollRef}
