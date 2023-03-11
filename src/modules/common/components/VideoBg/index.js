@@ -1,3 +1,3 @@
 //@ts-ignore
-import { VideoBg } from "./VideoBgAsync"
+import VideoBg from "./VideoBg"
 export { VideoBg }
