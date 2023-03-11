@@ -61,38 +61,3 @@ a:visited {
     text-decoration: none;
     color: inherit;
 }
-
-@font-face {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap) format('woff2');
-}
-
-@font-face {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 600;
-    src: url(https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap) format('woff2');
-}
-
-@font-face {
-    font-family: 'Montserrat', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    src: url(https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap) format('woff2');
-}
-
-@font-face {
-    font-family: 'Yellowtail', sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    src: url(https://fonts.gstatic.com/s/yellowtail/v12/OZpGg_pnoDtINPfRIlLotlw.ttf) format('truetype');
-}
-
-@font-face {
-    font-family: 'Yellowtail', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    src: url(https://fonts.gstatic.com/s/yellowtail/v12/OZpEg_pnoDtINPfRIgG_DbI.ttf) format('truetype');
-}
