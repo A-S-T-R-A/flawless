@@ -1,9 +1,10 @@
+import video from "assets/video/video.mp4"
 import styles from "./VideoBg.module.css"
 
-export function VideoBg({ src }) {
+export function VideoBg() {
     return (
         <video
-            src={src}
+            src={video}
             //@ts-ignore
             type="video/mp4"
             loop
