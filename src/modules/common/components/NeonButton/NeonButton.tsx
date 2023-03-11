@@ -1,5 +1,5 @@
 import { ReactNode, ButtonHTMLAttributes } from "react"
-import { Button, ButtonVariant } from "modules/common/Button"
+import { Button, ButtonVariant } from "modules/common/ui/Button"
 import { classNames } from "modules/common/helpers/classNames"
 import styles from "./NeonButton.module.css"
 
