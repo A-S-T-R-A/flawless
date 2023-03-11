@@ -18,9 +18,9 @@ export function App() {
                     <Hero />
                     <Rules />
                     <Gallery />
+                    <Footer />
                 </>
             )}
-            <Footer />
         </div>
     )
 }
