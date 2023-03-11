@@ -10,7 +10,6 @@ export default function VideoBg() {
     useEffect(() => {
         function handlePlay() {
             videoRef.current.play()
-            console.log("canplay")
         }
 
         if (showVideo) {
@@ -28,6 +27,7 @@ export default function VideoBg() {
                 src={videoPlaceHolder}
                 alt="videoPlaceHolder"
                 onLoad={() => setShowVideo(true)}
+                className={styles.img}
             />
             {showVideo && (
                 <video
