@@ -24,9 +24,6 @@ function Content() {
                 Лучше тусовки на диком западе. Залетайте к нам - у нас круто.
             </p>
             <NeonButton className={styles.btn}>BUY TICKETS</NeonButton>
-            {/* <h1 className={styles.title}>FLAWLESS</h1>
-            <p className={styles.description}>BEST PARTIES EVER</p>
-            <NeonButton>BUY TICKETS</NeonButton> */}
         </div>
     )
 }
