@@ -1,6 +1,5 @@
 .wrapper {
     position: relative;
-    background-image: url('assets/images/main/first.webp');
 }
 
 .container {
@@ -59,7 +58,7 @@
 
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(22, 22, 22);
-    }
+}
 
 
 @media(min-width: 481px) {
