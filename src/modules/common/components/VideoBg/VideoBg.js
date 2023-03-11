@@ -1,23 +1,15 @@
-import { useState, useRef, useEffect } from "react"
+import { useState, useEffect } from "react"
 import video from "assets/video/video.mp4"
 import videoPlaceHolder from "assets/images/main/first.webp"
 import styles from "./VideoBg.module.css"
 
 export default function VideoBg() {
     const [showVideo, setShowVideo] = useState(false)
-    const videoRef = useRef()
+    const [autoPlay, setAutoPlay] = useState(false)
 
     useEffect(() => {
-        function handlePlay() {
-            videoRef.current.play()
-        }
-
         if (showVideo) {
-            videoRef.current.addEventListener("canplaythrough", handlePlay)
-        }
-
-        return () => {
-            videoRef.current.removeEventListener("canplaythrough", handlePlay)
+            setAutoPlay(true)
         }
     }, [showVideo])
 
@@ -31,14 +23,13 @@ export default function VideoBg() {
             />
             {showVideo && (
                 <video
-                    ref={videoRef}
                     src={video}
                     type="video/mp4"
                     loop
                     controls={false}
                     muted
                     playsInline
-                    autoPlay={true}
+                    autoPlay={autoPlay}
                     className={styles.video}
                 />
             )}
