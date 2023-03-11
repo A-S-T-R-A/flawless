@@ -20,7 +20,7 @@ export function Rules() {
                 data-aos-once
             >
                 <h1 className={styles.title}>
-                    Our {/* Rules */}
+                    Our
                     <NeonText className={styles.neon}>Rules</NeonText>
                 </h1>
                 <ul className={styles.list}>

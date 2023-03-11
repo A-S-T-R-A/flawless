@@ -10,12 +10,16 @@ function Footer() {
                         <a
                             className={styles.linkTitle}
                             href="https://wa.me/+32485003653"
+                            target="_blank"
+                            rel="noreferrer"
                         >
                             WhatsApp
                         </a>
                         <a
                             className={styles.link}
                             href="https://wa.me/+32485003653"
+                            target="_blank"
+                            rel="noreferrer"
                         >
                             +32 485 00 36 53
                         </a>
@@ -24,12 +28,16 @@ function Footer() {
                         <a
                             className={styles.linkTitle}
                             href="mailto:flawlessdynastybe@gmail.com"
+                            target="_blank"
+                            rel="noreferrer"
                         >
                             Email
                         </a>
                         <a
                             className={styles.link}
                             href="mailto:flawlessdynastybe@gmail.com"
+                            target="_blank"
+                            rel="noreferrer"
                         >
                             flawlessdynastybe@gmail.com
                         </a>
