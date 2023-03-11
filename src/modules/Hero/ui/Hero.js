@@ -5,9 +5,9 @@ import styles from "./Hero.module.css"
 import NeonText from "modules/common/components/NeonText/NeonText"
 import { useAos } from "modules/common/helpers/useAOS"
 
-export function Hero() {
+export default function Hero() {
     useAos()
-
+    
     return (
         <section className={styles.wrapper} id="about">
             <div className={styles.container}>

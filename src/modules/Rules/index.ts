@@ -1,3 +1,3 @@
-export { Rules } from "./ui/Rules"
+export { Rules } from "./ui/RulesAsync"
 
 export { rulesList } from "constants/rulesData"
