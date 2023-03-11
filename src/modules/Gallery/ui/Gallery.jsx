@@ -1,7 +1,5 @@
 import { NeonButton } from "modules/common/components/NeonButton/NeonButton"
-import NeonText from "modules/common/components/NeonText/NeonText"
 import { useEffect, useRef, useState } from "react"
-import Content from "./components/Content/Content"
 import ImagesGallery from "./components/ImagesGallery/ImagesGallery"
 import styles from "./Gallery.module.css"
 
