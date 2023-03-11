@@ -38,6 +38,7 @@ export default function VideoBg() {
                     controls={false}
                     muted
                     playsInline
+                    autoPlay={true}
                     className={styles.video}
                 />
             )}
