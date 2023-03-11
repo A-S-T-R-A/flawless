@@ -10,11 +10,11 @@ export default function VideoBg() {
     useEffect(() => {
         function handlePlay() {
             videoRef.current.play()
+            console.log("canplay")
         }
 
         if (showVideo) {
             videoRef.current.addEventListener("canplaythrough", handlePlay)
-            console.log("canplay")
         }
 
         return () => {
@@ -33,7 +33,6 @@ export default function VideoBg() {
                 <video
                     ref={videoRef}
                     src={video}
-                    //@ts-ignore
                     type="video/mp4"
                     loop
                     controls={false}
