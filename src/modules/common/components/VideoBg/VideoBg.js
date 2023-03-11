@@ -7,9 +7,9 @@ export default function VideoBg() {
     const [showVideo, setShowVideo] = useState(false)
 
     function handleLoad() {
-        setTimeout(() => {
+        window.addEventListener("scroll", () => {
             setShowVideo(true)
-        }, 5000)
+        })
     }
 
     return (
