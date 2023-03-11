@@ -8,18 +8,18 @@ import "./index.css"
 import { Footer } from "./modules/Footer"
 
 export function App() {
-    /* const { ready } = useScrollTimeoutLoading(500) */
+    const { ready } = useScrollTimeoutLoading(500)
     return (
         <div>
             <Navigation />
             <Main />
-            {/* {ready && ( */}
-            <>
-                <Hero />
-                <Rules />
-                <Gallery />
-            </>
-            {/*     )} */}
+            {ready && (
+                <>
+                    <Hero />
+                    <Rules />
+                    <Gallery />
+                </>
+            )}
             <Footer />
         </div>
     )

@@ -7,7 +7,7 @@ import Aos from "aos"
 import "aos/dist/aos.css"
 import NeonText from "modules/common/components/NeonText/NeonText"
 
-export function Hero() {
+export default function Hero() {
     useEffect(() => {
         Aos.init({ duration: 2000 }, [])
     })
