@@ -3,7 +3,6 @@ import { menuData } from "../../../../data"
 import { BurgerCta } from "../BurgerCta"
 import { NavigationList } from "../../../common/NavigationList"
 import styles from "./BurgerNav.module.css"
-import video from "assets/video/video.mp4"
 import { classNames } from "modules/common/helpers/classNames"
 import { VideoBg } from "modules/common/components/VideoBg"
 
@@ -38,7 +37,7 @@ export function BurgerNav({ showBurger, setShowBurger }) {
             })}
             onClick={closeClickHandler}
         >
-            <VideoBg src={video} />
+            <VideoBg />
             <div
                 className={classNames(styles.wrapper, {
                     [styles.navOpen]: showBurger,
