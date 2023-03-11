@@ -1,15 +1,10 @@
-import { useEffect } from "react"
 import { rulesList } from "../index"
 import styles from "./Rules.module.css"
-//@ts-ignore
-import Aos from "aos"
-import "aos/dist/aos.css"
 import NeonText from "modules/common/components/NeonText/NeonText"
+import { useAos } from "modules/common/helpers/useAOS"
 
 export default function Rules() {
-    useEffect(() => {
-        Aos.init({ duration: 2000 }, [])
-    })
+    useAos()
 
     return (
         <div className={styles.wrapper} id="rules">

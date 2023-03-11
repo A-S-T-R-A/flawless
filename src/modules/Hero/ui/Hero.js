@@ -1,17 +1,13 @@
-import { useEffect } from "react"
 import { imageHero } from "assets/images/hero"
 import { heroList } from "constants/heroData"
 import { NeonButton } from "modules/common/components/NeonButton/NeonButton"
 import styles from "./Hero.module.css"
-import Aos from "aos"
-import "aos/dist/aos.css"
 import NeonText from "modules/common/components/NeonText/NeonText"
+import { useAos } from "modules/common/helpers/useAOS"
 
 export default function Hero() {
-    useEffect(() => {
-        Aos.init({ duration: 2000 }, [])
-    })
-
+    useAos()
+    
     return (
         <section className={styles.wrapper} id="about">
             <div className={styles.container}>
