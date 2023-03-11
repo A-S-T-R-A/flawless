@@ -1,4 +1,4 @@
-import { Gallery } from "./ui/Gallery"
+import { Gallery } from "./ui/GalleryAsync"
 
 import {
     firstImg,

@@ -5,7 +5,7 @@ import Content from "./components/Content/Content"
 import ImagesGallery from "./components/ImagesGallery/ImagesGallery"
 import styles from "./Gallery.module.css"
 
-export function Gallery() {
+export default function Gallery() {
     const scrollRef = useRef(null)
     const [imageOpen, setImageOpen] = useState(-1)
     const [mouseDownAt, setMouseDownAt] = useState(0)
