@@ -38,7 +38,7 @@ export function BurgerNav({ showBurger, setShowBurger }) {
             })}
             onClick={closeClickHandler}
         >
-            <VideoBg src={video} />
+            <VideoBg />
             <div
                 className={classNames(styles.wrapper, {
                     [styles.navOpen]: showBurger,
