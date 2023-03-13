@@ -5,7 +5,6 @@ import fourthImg from "./4.webp"
 import fifthImg from "./5.webp"
 import sixthImg from "./6.webp"
 import seventhImg from "./7.webp"
-import eightsImg from "./8.webp"
 
 export {
     firstImg,
@@ -15,5 +14,4 @@ export {
     fifthImg,
     sixthImg,
     seventhImg,
-    eightsImg,
 }
