@@ -1,6 +1,6 @@
 import { useState } from "react"
 import video from "assets/video/flawless-desktop.mp4"
-import videoPlaceHolder from "assets/images/main/first.webp"
+import videoPlaceHolder from "assets/images/main/flawlessFirst.webp"
 import styles from "./VideoBg.module.css"
 
 export default function VideoBg() {
