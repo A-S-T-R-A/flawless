@@ -8,7 +8,6 @@ import {
     fifthImg,
     sixthImg,
     seventhImg,
-    eightsImg,
 } from "assets/images/heroGallery"
 
 export { Gallery }
@@ -21,5 +20,4 @@ export const galleryImages = [
     fifthImg,
     sixthImg,
     seventhImg,
-    eightsImg,
 ]
