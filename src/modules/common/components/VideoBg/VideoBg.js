@@ -1,17 +1,10 @@
-import { useState, useEffect } from "react"
-import video from "assets/video/video.mp4"
-import videoPlaceHolder from "assets/images/main/first.webp"
+import { useState } from "react"
+import video from "assets/video/flawless-desktop.mp4"
+import videoPlaceHolder from "assets/images/main/flawlessFirst.webp"
 import styles from "./VideoBg.module.css"
 
 export default function VideoBg() {
     const [showVideo, setShowVideo] = useState(false)
-    const [autoPlay, setAutoPlay] = useState(false)
-
-    useEffect(() => {
-        if (showVideo) {
-            setAutoPlay(true)
-        }
-    }, [showVideo])
 
     return (
         <>
@@ -29,7 +22,7 @@ export default function VideoBg() {
                     controls={false}
                     muted
                     playsInline
-                    autoPlay={autoPlay}
+                    autoPlay={true}
                     className={styles.video}
                 />
             )}
