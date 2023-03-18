@@ -19,9 +19,7 @@ export function NeonButton(props: NeonButtonProps) {
     )
 
     function clickHandler() {
-        window.open(
-            "https://shop.eventix.io/8d7ac0a3-868d-4775-9034-2be52805f254?shop_code=uvk444kw&original_referer=https%3A%2F%2Fflawlessdynasty.com%2F"
-        )
+        window.open("https://eventix.shop/dbuqe29x")
     }
 
     return (
