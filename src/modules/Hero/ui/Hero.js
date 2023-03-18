@@ -1,5 +1,5 @@
 import { imageHero } from "assets/images/hero"
-import { heroList } from "constants/heroData"
+import { heroTitle, heroList } from "constants/heroData"
 import { NeonButton } from "modules/common/components/NeonButton/NeonButton"
 import styles from "./Hero.module.css"
 import NeonText from "modules/common/components/NeonText/NeonText"
@@ -29,15 +29,21 @@ export default function Hero() {
                     data-aos-once
                 >
                     <h1 className={styles.title}>
-                        Вас ждёт, лучший диджей from Ukraine —
+                        {heroTitle.title}
                         <br />
-                        <NeonText className={styles.neon}>FVSHIXNKILLA & MC Safari</NeonText>
+                        <NeonText className={styles.neon}>
+                            {heroTitle.neonText}
+                        </NeonText>
                     </h1>
                     <ul className={styles.list}>
                         {heroList.map(item => {
                             return (
                                 <li className={styles.listItem} key={item.id}>
-                                    <img src={item.icon} alt="Hero" className={styles.icon} />
+                                    <img
+                                        src={item.icon}
+                                        alt="Hero"
+                                        className={styles.icon}
+                                    />
                                     <p className={styles.text}>{item.text}</p>
                                 </li>
                             )
