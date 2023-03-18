@@ -1,9 +1,14 @@
 import { Cocktail, Disco, Speaker, Vinyl, Vip } from "assets/images/hero/index"
 
+export const heroTitle = {
+    title: "Flawless Dynasty",
+    neonText: "Party",
+}
+
 export const heroList = [
     {
         id: 1,
-        text: `Один из лучших диджеев Молдовы - Terra Black`,
+        text: `Вас ждёт, лучший диджей from Ukraine — FASHIXNKILLA & MC Safari`,
         icon: Vinyl,
     },
     {
