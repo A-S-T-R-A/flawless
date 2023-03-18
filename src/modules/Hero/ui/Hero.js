@@ -7,7 +7,7 @@ import { useAos } from "modules/common/helpers/useAOS"
 
 export default function Hero() {
     useAos()
-    
+
     return (
         <section className={styles.wrapper} id="about">
             <div className={styles.container}>
@@ -29,18 +29,15 @@ export default function Hero() {
                     data-aos-once
                 >
                     <h1 className={styles.title}>
-                        Flawless Dynasty{" "}
-                        <NeonText className={styles.neon}>Party</NeonText>
+                        Вас ждёт, лучший диджей from Ukraine —
+                        <br />
+                        <NeonText className={styles.neon}>FVSHIXNKILLA & MC Safari</NeonText>
                     </h1>
                     <ul className={styles.list}>
                         {heroList.map(item => {
                             return (
                                 <li className={styles.listItem} key={item.id}>
-                                    <img
-                                        src={item.icon}
-                                        alt="Hero"
-                                        className={styles.icon}
-                                    />
+                                    <img src={item.icon} alt="Hero" className={styles.icon} />
                                     <p className={styles.text}>{item.text}</p>
                                 </li>
                             )
