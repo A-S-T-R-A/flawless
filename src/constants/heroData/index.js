@@ -8,7 +8,7 @@ export const heroTitle = {
 export const heroList = [
     {
         id: 1,
-        text: `Вас ждёт, лучший диджей from Ukraine — FASHIXNKILLA & MC Safari`,
+        text: `TERRA BLVCK вновь в Брюсселе!`,
         icon: Vinyl,
     },
     {

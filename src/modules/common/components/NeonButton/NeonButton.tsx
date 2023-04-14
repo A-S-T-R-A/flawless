@@ -19,7 +19,8 @@ export function NeonButton(props: NeonButtonProps) {
     )
 
     function clickHandler() {
-        window.open("https://eventix.shop/dbuqe29x")
+        // window.open("https://eventix.shop/dbuqe29x")
+        window.location.href = "/"
     }
 
     return (
