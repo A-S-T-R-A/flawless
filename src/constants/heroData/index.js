@@ -13,7 +13,7 @@ export const heroList = [
     },
     {
         id: 2,
-        text: `Лучший алкоголь и коктейли!`,
+        text: `Лучшие коктейли и напитки!`,
         icon: Cocktail,
     },
     {
