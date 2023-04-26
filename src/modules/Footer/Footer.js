@@ -27,7 +27,7 @@ function Footer() {
                     <div className={styles.email}>
                         <a
                             className={styles.linkTitle}
-                            href="mailto:flawlessdynastybe@gmail.com"
+                            href="mailto:flawlessdynasty.be@gmail.com"
                             target="_blank"
                             rel="noreferrer"
                         >
@@ -35,11 +35,11 @@ function Footer() {
                         </a>
                         <a
                             className={styles.link}
-                            href="mailto:flawlessdynastybe@gmail.com"
+                            href="mailto:flawlessdynasty.be@gmail.com"
                             target="_blank"
                             rel="noreferrer"
                         >
-                            flawlessdynastybe@gmail.com
+                            flawlessdynasty.be@gmail.com
                         </a>
                     </div>
                     <div className={styles.socialIcons}>
