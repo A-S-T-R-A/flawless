@@ -12,14 +12,14 @@ export default function Hero() {
         <section className={styles.wrapper} id="about">
             <div className={styles.container}>
                 <div className={styles.imgContainer}>
-                    <img
+                    {/* <img
                         data-aos="fade-up-right"
                         data-aos-duration="800"
                         data-aos-once
                         src={imageHero}
                         alt="Disc Jokey"
                         className={styles.hero}
-                    />
+                    /> */}
                 </div>
                 <div
                     className={styles.content}
@@ -31,19 +31,13 @@ export default function Hero() {
                     <h1 className={styles.title}>
                         {heroTitle.title}
                         <br />
-                        <NeonText className={styles.neon}>
-                            {heroTitle.neonText}
-                        </NeonText>
+                        <NeonText className={styles.neon}>{heroTitle.neonText}</NeonText>
                     </h1>
                     <ul className={styles.list}>
                         {heroList.map(item => {
                             return (
                                 <li className={styles.listItem} key={item.id}>
-                                    <img
-                                        src={item.icon}
-                                        alt="Hero"
-                                        className={styles.icon}
-                                    />
+                                    <img src={item.icon} alt="Hero" className={styles.icon} />
                                     <p className={styles.text}>{item.text}</p>
                                 </li>
                             )
