@@ -1,25 +1,39 @@
-import { imageHero } from "assets/images/hero"
-import { heroTitle, heroList } from "constants/heroData"
 import { NeonButton } from "modules/common/components/NeonButton/NeonButton"
 import styles from "./Hero.module.css"
 import NeonText from "modules/common/components/NeonText/NeonText"
 import { useAos } from "modules/common/helpers/useAOS"
+import { useEffect, useMemo, useState } from "react"
+import { client, urlFor } from "modules/common/helpers/client"
+import { reformatParagraphs } from "../lib/reformatParagraphs"
 
 export default function Hero() {
+    const [hero, setHero] = useState()
     useAos()
+
+    useEffect(() => {
+        const query = "*[_type == 'hero']"
+
+        client.fetch(query).then(data => {
+            setHero(data?.[0])
+        })
+    }, [])
+
+    const heroList = useMemo(() => hero && reformatParagraphs(hero.icons, hero.paragraphs), [hero])
+
+    if (!hero) return null
 
     return (
         <section className={styles.wrapper} id="about">
             <div className={styles.container}>
                 <div className={styles.imgContainer}>
-                    {/* <img
+                    <img
                         data-aos="fade-up-right"
                         data-aos-duration="800"
                         data-aos-once
-                        src={imageHero}
+                        src={urlFor(hero?.poster)}
                         alt="Disc Jokey"
                         className={styles.hero}
-                    /> */}
+                    />
                 </div>
                 <div
                     className={styles.content}
@@ -29,14 +43,14 @@ export default function Hero() {
                     data-aos-once
                 >
                     <h1 className={styles.title}>
-                        {heroTitle.title}
+                        {hero.title}
                         <br />
-                        <NeonText className={styles.neon}>{heroTitle.neonText}</NeonText>
+                        <NeonText className={styles.neon}>{hero.neonTitle}</NeonText>
                     </h1>
                     <ul className={styles.list}>
-                        {heroList.map(item => {
+                        {heroList.map((item, index) => {
                             return (
-                                <li className={styles.listItem} key={item.id}>
+                                <li className={styles.listItem} key={index}>
                                     <img src={item.icon} alt="Hero" className={styles.icon} />
                                     <p className={styles.text}>{item.text}</p>
                                 </li>
