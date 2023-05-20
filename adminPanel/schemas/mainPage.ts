@@ -13,5 +13,18 @@ export default {
       title: 'Tagline',
       type: 'string',
     },
+    {
+      name: 'videoPlaceholder',
+      title: 'Video Placeholder',
+      type: 'image',
+      options: {
+        hotspot: true,
+      },
+    },
+    {
+      name: 'videoFile',
+      type: 'file',
+      title: 'Video',
+    },
   ],
 }

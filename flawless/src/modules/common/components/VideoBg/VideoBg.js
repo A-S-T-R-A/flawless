@@ -1,15 +1,29 @@
-import { useState } from "react"
-import video from "assets/video/flawless-desktop.mp4"
-import videoPlaceHolder from "assets/images/main/flawlessFirst.webp"
+import { useEffect, useState } from "react"
 import styles from "./VideoBg.module.css"
+import { client, urlFor } from "modules/common/helpers/client"
+import { getFileAsset } from "@sanity/asset-utils"
 
 export default function VideoBg() {
     const [showVideo, setShowVideo] = useState(false)
+    const [videoS, setVideoS] = useState()
+
+    useEffect(() => {
+        const query = "*[_type == 'main']"
+
+        client.fetch(query).then(data => {
+            setVideoS(data?.[0])
+        })
+    }, [])
+
+    if (!videoS) return null
+
+    const video = getFileAsset(videoS.videoFile.asset, client.config()).url
+    const videoPlaceholder = urlFor(videoS.videoPlaceholder)
 
     return (
         <>
             <img
-                src={videoPlaceHolder}
+                src={videoPlaceholder}
                 alt="videoPlaceHolder"
                 onLoad={() => setShowVideo(true)}
                 className={styles.img}

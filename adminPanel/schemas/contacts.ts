@@ -4,43 +4,31 @@ export default {
   title: 'Contacts',
   fields: [
     {
-      name: 'socialIcon1',
-      title: 'Icon',
-      type: 'image',
-      option: {
-        hotspot: true,
-      },
+      name: 'socialIcons',
+      title: 'Social Icons',
+      type: 'array',
+      of: [
+        {
+          name: 'socialIcon',
+          title: 'Icon',
+          type: 'image',
+          option: {
+            hotspot: true,
+          },
+        },
+      ],
     },
     {
-      name: 'address1',
-      title: 'Address',
-      type: 'url',
-    },
-    {
-      name: 'socialIcon2',
-      title: 'Icon',
-      type: 'image',
-      option: {
-        hotspot: true,
-      },
-    },
-    {
-      name: 'address2',
-      title: 'Address',
-      type: 'url',
-    },
-    {
-      name: 'socialIcon3',
-      title: 'Icon',
-      type: 'image',
-      option: {
-        hotspot: true,
-      },
-    },
-    {
-      name: 'address3',
-      title: 'Address',
-      type: 'url',
+      name: 'socialAdresses',
+      title: 'Social Url',
+      type: 'array',
+      of: [
+        {
+          name: 'adress',
+          title: 'Adress',
+          type: 'string',
+        },
+      ],
     },
     {
       name: 'email',

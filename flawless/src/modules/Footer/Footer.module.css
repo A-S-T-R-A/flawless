@@ -48,7 +48,7 @@
 }
 
 .link {
-    color: var(--gray-color);
+    color: var(--gray-color) !important;
     position: relative;
     left: 0;
     transition: all .3s ease-in-out;
@@ -56,7 +56,7 @@
 
 .link:hover {
     left: 6px;
-    color: var(--main-text-color);
+    color: var(--main-text-color) !important;
 }
 
 .socialIcons {

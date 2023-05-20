@@ -1,11 +1,11 @@
 import { urlFor } from "modules/common/helpers/client"
 
-export function reformatParagraphs(icons, paragraphs) {
+export function reformatData(icons, text) {
     const array = []
 
-    for (const i in paragraphs) {
+    for (const i in text) {
         const icon = urlFor(icons[i]).url() || ""
-        const obj = { icon, text: paragraphs[i] }
+        const obj = { icon, text: text[i] }
         array.push(obj)
     }
 

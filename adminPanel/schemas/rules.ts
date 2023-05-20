@@ -14,19 +14,28 @@ export default {
       type: 'string',
     },
     {
-      name: 'firstRule',
-      title: 'Rule',
-      type: 'string',
+      name: 'rules',
+      title: 'Rules',
+      type: 'array',
+      of: [
+        {
+          name: 'rule',
+          title: 'Rule',
+          type: 'string',
+        },
+      ],
     },
     {
-      name: 'secondRule',
-      title: 'Rule',
-      type: 'string',
-    },
-    {
-      name: 'thirdRule',
-      title: 'Rule',
-      type: 'string',
+      name: 'icons',
+      title: 'Icons',
+      type: 'array',
+      of: [
+        {
+          name: 'icon',
+          title: 'Icon',
+          type: 'image',
+        },
+      ],
     },
   ],
 }

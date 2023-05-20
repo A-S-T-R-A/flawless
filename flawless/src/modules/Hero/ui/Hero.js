@@ -4,7 +4,7 @@ import NeonText from "modules/common/components/NeonText/NeonText"
 import { useAos } from "modules/common/helpers/useAOS"
 import { useEffect, useMemo, useState } from "react"
 import { client, urlFor } from "modules/common/helpers/client"
-import { reformatParagraphs } from "../lib/reformatParagraphs"
+import { reformatData } from "modules/common/helpers/reformatData"
 
 export default function Hero() {
     const [hero, setHero] = useState()
@@ -18,7 +18,7 @@ export default function Hero() {
         })
     }, [])
 
-    const heroList = useMemo(() => hero && reformatParagraphs(hero.icons, hero.paragraphs), [hero])
+    const heroList = useMemo(() => hero && reformatData(hero.icons, hero.paragraphs), [hero])
 
     if (!hero) return null
 

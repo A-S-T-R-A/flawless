@@ -1,7 +1,21 @@
 import { SocialIcons } from "modules/common/components/SocialIcons"
 import styles from "./Footer.module.css"
+import { useEffect, useState } from "react"
+import { client } from "modules/common/helpers/client"
 
 function Footer() {
+    const [contacts, setContacts] = useState()
+
+    useEffect(() => {
+        const query = "*[_type == 'contacts']"
+
+        client.fetch(query).then(data => {
+            setContacts(data[0])
+        })
+    }, [])
+
+    if (!contacts) return null
+
     return (
         <footer className={styles.wrapper} id="contacts">
             <div className={styles.container}>
@@ -21,7 +35,7 @@ function Footer() {
                             target="_blank"
                             rel="noreferrer"
                         >
-                            +32 485 00 36 53
+                            {contacts.phone}
                         </a>
                     </div>
                     <div className={styles.email}>
@@ -39,7 +53,7 @@ function Footer() {
                             target="_blank"
                             rel="noreferrer"
                         >
-                            flawlessdynasty.be@gmail.com
+                            {contacts.email}
                         </a>
                     </div>
                     <div className={styles.socialIcons}>
