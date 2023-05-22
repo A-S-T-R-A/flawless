@@ -20,8 +20,6 @@ export default function Rules() {
 
     const rulesList = useMemo(() => rules && reformatData(rules.icons, rules.rules), [rules])
 
-    if (!rules) return null
-
     return (
         <div className={styles.wrapper} id="rules">
             <div
@@ -31,11 +29,11 @@ export default function Rules() {
                 data-aos-once
             >
                 <h1 className={styles.title}>
-                    Our
-                    <NeonText className={styles.neon}>Rules</NeonText>
+                    {rules?.title}
+                    <NeonText className={styles.neon}>{rules?.neonTitle}</NeonText>
                 </h1>
                 <ul className={styles.list}>
-                    {rulesList.map((item: any, index: number) => {
+                    {rulesList?.map((item: any, index: number) => {
                         return (
                             <li className={styles.listItem} key={index}>
                                 <img src={item.icon} alt="rule" className={styles.icon} />

@@ -4,6 +4,7 @@ import ModalImage from "../ModalImage/ModalImage"
 import styles from "./ImagesGallery.module.css"
 import { useAos } from "modules/common/helpers/useAOS"
 import { client, urlFor } from "modules/common/helpers/client"
+import { AsyncImage } from "modules/common/components/AsyncImage/AsyncImage"
 
 function ImagesGallery({
     percent,
@@ -27,8 +28,6 @@ function ImagesGallery({
         })
     }, [])
 
-    if (!gallery) return null
-
     return (
         <div
             className={styles.galleryImages}
@@ -42,7 +41,7 @@ function ImagesGallery({
                 onScroll={onScrollX}
                 onMouseDown={mouseDownHandler}
             >
-                {gallery.map((image, index) => {
+                {gallery?.map((image, index) => {
                     const img = urlFor(image.imageUrl).url()
                     return (
                         <Fragment key={index}>
@@ -51,19 +50,23 @@ function ImagesGallery({
                                 onClose={() => setImageOpen(-1)}
                                 image={img}
                             />
-                            <img
-                                key={index}
-                                src={img}
-                                alt="img"
-                                className={styles.img}
-                                draggable={false}
-                                style={{
-                                    objectPosition: `${
-                                        100 - (index % 2 ? percent * 0.8 : percent)
-                                    }% center`,
-                                }}
-                                onMouseUp={e => onImageOpen(e, index)}
-                            />
+                            {gallery ? (
+                                <img
+                                    key={index}
+                                    src={img}
+                                    alt="img"
+                                    className={styles.img}
+                                    draggable={false}
+                                    style={{
+                                        objectPosition: `${
+                                            100 - (index % 2 ? percent * 0.8 : percent)
+                                        }% center`,
+                                    }}
+                                    onMouseUp={e => onImageOpen(e, index)}
+                                />
+                            ) : (
+                                ""
+                            )}
                         </Fragment>
                     )
                 })}
