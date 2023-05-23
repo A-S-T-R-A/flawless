@@ -19,7 +19,9 @@ export default function Hero() {
         })
     }, [])
 
-    const heroList = useMemo(() => hero && reformatData(hero.icons, hero.paragraphs), [hero])
+    const heroList = useMemo(() => {
+        if (hero) return reformatData(hero.icons, hero.paragraphs)
+    }, [hero])
 
     return (
         <section className={styles.wrapper} id="about">
@@ -30,13 +32,11 @@ export default function Hero() {
                             data-aos="fade-up-right"
                             data-aos-duration="800"
                             data-aos-once
-                            src={urlFor(hero?.poster)}
+                            src={urlFor(hero?.poster) || ""}
                             alt="Disc Jokey"
                             className={styles.hero}
                         />
-                    ) : (
-                        ""
-                    )}
+                    ) : null}
                 </div>
                 <div
                     className={styles.content}

@@ -5,7 +5,7 @@ export function reformatData(icons, text) {
 
     for (const i in text) {
         const icon = urlFor(icons[i]).url() || ""
-        const obj = { icon, text: text[i] }
+        const obj = { icon, text: text[i] || "" }
         array.push(obj)
     }
 
